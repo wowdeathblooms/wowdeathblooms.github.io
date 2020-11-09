@@ -15,143 +15,334 @@
         <a href="../Index.html"><< Back</a>
         <hr />
 
-        <p>
-            <Badge Color="Color.Info">Single Target</Badge>
-            <Badge Color="Color.Info">BL pullon vagy problémás phase-ben</Badge>
-            <Badge Color="Color.Info">2/4/14</Badge>
-        </p>
 
+        <h3>Boss</h3>
 
-        <h3>Portálok - <spell>Dimensional Tear</spell></h3>
+    <div class="alert alert-info" role="alert">
         <ul>
-            <li>A boss felmarkol két radnom non-tank playert a debuffal</li>
-            <li>8s elteltével robban, létrehozva egy portalt (csekély arcane dmg-et osztva 6 yardban)</li>
-            <li>Egy portalon átfutva a player a másik portalra teleportál (nem kell interractolni a portállal)</li>
-            <li>Pár másodperc elteltével a portál újra használhatóvá válik</li>
-            <li><small>A portálok használat után internal CD-re kerülnek pár másodpercre?</small></li>
-            <li>Amikor a boss újra castolja a <spell>Dimensional Tear</spell>-t, az előző portálok eltűnnek, az újak veszik át a helyüket</li>
-            <li>Az encounter legtöbb mechanikáját a portálokkal kell counterelnie a raidnek</li>
-            <li>
-                <strong>Fix portál pozíciók</strong>
-                <ol>
-                    <li>Az egyik portál a szoba közepére kerül</li>
-                    <li>A másik portál a szoba feljelölt végébe (~kör alakú, mindegy, hogy pontosan hova)</li>
-                </ol>
-            </li>
+            <li>A boss összes ability-je végigkísér az összes phase-en</li>
+            <li>Egészen a P3-ig középen tankoljuk</li>
         </ul>
+    </div>
 
-        <h3>Ability-k</h3>
-        <ul>
 
-            <li class="mb-2">
-                <spell>Glyph of Destruction</spell> <Badge Color="Color.Primary">Tank</Badge>
-                <ul>
-                    <li>A main-tankra castolja a boss</li>
-                    <li>
-                        4s elteltével berobban
+        <div class="card-container">
+            <div class="card bg-light">
+                <h5 class="card-header" id="Dimensional_Tear" data-toggle="collapse show" href="#Dimensional_TearBody">
+                    <spell>Dimensional Tear</spell>
+                    <div class="float-right">
+                        <span class="badge badge-dark">Mindenki</span>
+                    </div>
+                </h5>
+                <div class="card-body" id="Dimensional_TearBody">
+                    <ul>
+                        <li>A boss feljelöl két random non-tank playert</li>
+                        <li>8s elteltével robban, létrehozva egy portalt (<dmg>6.3k Arcane</dmg> dmg-et osztva 6 yardban)</li>
+
+
+                    </ul>
+
+                    <div class="alert alert-danger" role="alert">
                         <ul>
-                            <li>A távolsággal fordítottan arányos a sebzése</li>
-                            <li>Olyan messze kell vinni a raidtől, amennyire csak lehet</li>
-                            <li>A tankra kerül egy <spell>Arcane Vulnerability</spell> debuff 45s-re, ami az explosion okozta sebzést felskálázza</li>
-                            <li>A debuff miatt muszáj minden <spell>Glyph of Destruction</spell> után tank swappelni</li>
-                            <li>A tank a bosshoz közelebbi portalt használja, hogy eltávolodjon a raidtől</li>
-                            <li>Az off-tank ekkor tauntolja át, hogy a boss ne rohangáljon fel-alá</li>
+                            <li>Egy portalon átfutva a player a másik portalra teleportál (nem kell interractolni a portállal)</li>
+                            <li>Pár másodperc elteltével a portál újra használhatóvá válik</li>
+                            <li><small>A portálok használat után internal CD-re kerülnek pár másodpercre?</small></li>
+                            <li>Amikor a boss újra castolja a <spell>Dimensional Tear</spell>-t, az előző portálok eltűnnek, az újak veszik át a helyüket</li>
+                            <li>Az encounter legtöbb mechanikáját a portálokkal kell counterelnie a raidnek</li>
+                            <li>
+                                <strong>Fix portál pozíciók</strong>
+                                <ol>
+                                    <li>Az egyik portál a szoba közepére kerül</li>
+                                    <li>A másik portál a szoba feljelölt végébe (~kör alakú, mindegy, hogy pontosan hova)</li>
+                                </ol>
+                            </li>
                         </ul>
-                    </li>
-                </ul>
-            </li>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-            <li class="mb-2">
-                <spell>Rift Blast</spell>
-                <ul>
-                    <li>Fehét beamek amik a bossból indulnak ki sugár irányba</li>
-                    <li><small>Random playert választ vajon vagy teljesen random, hogy merre vannak a beamek?</small></li>
-                    <li>A beameket dodge-olni kell</li>
-                </ul>
-            </li>
+        <div class="card-container">
+            <div class="card bg-light">
+                <h5 class="card-header" id="Glyph_of_Destruction" data-toggle="collapse show" href="#Glyph_of_DestructionBody">
+                    <spell>Glyph of Destruction</spell>
+                    <div class="float-right">
+                        <span class="badge badge-success">Healer</span>
+                        <span class="badge badge-primary">Tank</span>
+                    </div>
+                </h5>
+                <div class="card-body" id="Glyph_of_DestructionBody">
+                    <ul>
+                        <li>A <span class="badge badge-primary">Tank</span>-ra castolja a boss</li>
+                        <li>4s-es DoT: <dmg>4.7k Arcane / 1s</dmg></li>
+                        <li>A DoT lejártával <dmg>35.9k Arcange</dmg> dmg sebez raid-wide</li>
+                        <li>A sebzés mértéke a távolsággal csökken</li>
+                        <li>A tankra kerül egy <a href="#Arcane_Vulnerability"><spell>Arcane Vulnerability</spell></a> debuff, ami növeli a bekapott Arcane dmg-et 45s-ig</li>
 
-            <li class="mb-2">
-                <spell>Hyperlight Spark</spell>
-                <ul>
-                    <li>Elkerülhetetlen raid-wide arcane dmg</li>
-                    <li>A healerek szórakoztatására szolgál, ki kell healelni</li>
-                </ul>
-            </li>
+                        <div class="alert alert-danger" role="alert">
+                            <ul>
+                                <li>Minden <spell>Glyph of Destruction</spell> után tank-swappelni kell </li>
+                                <li>
+                                    4s alatt nem lehet elég messze jutni, a portálokat kell használni
+                                    <ol>
+                                        <li>A bosst minden phase-ben az egyik portál közelében tartjuk</li>
+                                        <li>A cast után a main tank belerohan a portaálba</li>
+                                        <li>Az off-tank átveszi a bosst</li>
+                                    </ol>
+                                </li>
+                            </ul>
 
-            <li class="mb-2">
-                <spell>Stasis Trap</spell>
-                <ul>
-                    <li>Random non-tank playerre kerül</li>
-                    <li>A player alatt megjelenik egy fehét trap</li>
-                    <li>Ha később valaki belelép stunnol, a többieknek kell kiütni az áldozatot</li>
-                    <li>Low-traffic area-ba kivisszük</li>
-                    <li>Előre meghatározott immunity playerek összeszedik ha már bosszantó mennyiségű összegyűlt</li>
-                </ul>
-            </li>
+                        </div>
+                    </ul>
+                </div>
+            </div>
 
-        </ul>
+            <div class="card-container">
+                <div class="card bg-light">
+                    <h5 class="card-header" id="Arcane_Vulnerability" data-toggle="collapse show" href="#Arcane_VulnerabilityBody">
+                        <spell>Arcane Vulnerability</spell>
+                        <div class="float-right">
+                            <span class="badge badge-primary">Tank</span>
+                        </div>
+                    </h5>
+                    <div class="card-body" id="Arcane_VulnerabilityBody">
+                        <ul>
+                            <li>A debuff 50%-kal növeli a bekapott Arcane dmg-et 45s-ig</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="card-container">
+            <div class="card bg-light">
+                <h5 class="card-header" id="Stasis_Trap" data-toggle="collapse show" href="#Stasis_TrapBody">
+                    <spell>Stasis Trap</spell>
+                    <div class="float-right">
+                        <span class="badge badge-dark">Mindenki</span>
+                    </div>
+                </h5>
+                <div class="card-body" id="Stasis_TrapBody">
+                    <ul>
+                        <li>Random non-tank playerre kerül</li>
+                        <li>A player alatt megjelenik egy fehét trap</li>
+                        <li>
+                            4s-kel később a trap aktiválódik, ha valaki később belelép:
+                            <ul>
+                                <li>Az áldozat stunnolódik</li>
+                                <li><dmg>6.3k Arcange / 2s</dmg> tick dmg-et kap</li>
+                                <li>Addig amíg a többi player ki nem üti a trapből</li>
+                            </ul>
+                        </li>
+                        <li>Low-traffic area-ba kivisszük (phase-enként változik, hogy ez hol van)</li>
+                        <li><strong>Immunity-vel szedhető/szedendő</strong></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="card-container">
+            <div class="card bg-light">
+                <h5 class="card-header" id="Rift_Blast" data-toggle="collapse show" href="#Rift_BlastBody">
+                    <spell>Rift Blast</spell>
+                    <div class="float-right">
+                        <span class="badge badge-dark">Mindenki</span>
+                    </div>
+                </h5>
+                <div class="card-body" id="Rift_BlastBody">
+                    <ul>
+                        <li>Fehét beamek amik a bossból indulnak ki sugár irányba</li>
+                        <li>A beameket <strong>dodge-olni kell</strong></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="card-container">
+            <div class="card bg-light">
+                <h5 class="card-header" id="Hyperlight_Spark" data-toggle="collapse show" href="#Hyperlight_SparkBody">
+                    <spell>Hyperlight Spark</spell>
+                    <div class="float-right">
+                        <span class="badge badge-success">Healer</span>
+                    </div>
+                </h5>
+                <div class="card-body" id="Hyperlight_SparkBody">
+                    <ul>
+                        <li>Elkerülhetetlen raid-wide <dmg>9.4k Arcane</dmg> dmg</li>
+                        <li>Egyszerűen <strong>ki kell healelni</strong></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
 
         <h3>Phase 1</h3>
-        <ul>
-            <li>70% boss HP-ig tart</li>
-            <li>
-                <spell>SPIRIT_NAME_MISSING <small>beta</small></spell>
-                <ul>
-                    <li>Megjelenik több <spell>Spirit</spell>, mindegyik egy random playerre fixál</li>
-                    <li>A targetjük felé rohannak, ha utolérik a playert: MC-be kerülnek és ki kell ütni őket</li>
-                    <li>
-                        A <spell>Spiritek</spell> nagyon gyorsan futnak, nem sok idő van reagálni
+
+
+        <div class="alert alert-info" role="alert">
+            <ul>
+                <li>70% boss HP-ig tart</li>
+                <li>A <span class="badge badge-primary">Tank</span> középen tartja a bosst</li>
+            </ul>
+        </div>
+
+        <div class="card-container">
+            <div class="card bg-light">
+                <h5 class="card-header" id="Crystal_of_Phantasms" data-toggle="collapse show" href="#Crystal_of_PhantasmsBody">
+                    <spell>Crystal of Phantasms</spell>
+                    <div class="float-right">
+                        <span class="badge badge-dark">Mindenki</span>
+                    </div>
+                </h5>
+                <div class="card-body" id="Crystal_of_PhantasmsBody">
+                    <ul>
+                        <li>Megjelenik több <spell>Fleeting Spirit</spell>, mindegyik egy random playerre fixál</li>
+                        <li>
+                            A targetjüket üldözik, ha egy spirit utóléri az áldozatát
+                            <ul>
+                                <li><spell>Possession</spell> debuff kerül rá</li>
+                                <li>A player MC-be kerül, amiből ki kell ütni</li>
+                            </ul>
+                        </li>
+                        <li>12s üldözés után despawnolnak</li>
+                    </ul>
+
+                    <div class="alert alert-danger" role="alert">
+                        A spiritek nevetségesen gyorsak; csak a portál segítségével lehet őket távol tartani
                         <ul>
-                            <li>Mindenki a szoba közepe felé orientálódik az első phase alatt</li>
-                            <li>A fixated playerek azonnal belerohannak a középső portalba</li>
-                            <li>A Spiritek 12s-ig élnek, a portalokat esetenként visszafelé is kell használni, ha még üldözi a playert a Spiritje</li>
-                            <li><small>Beta concern: Ha shared a portalon az ICD az mindent felborít</small></li>
+                            <li>Mindenki a szoba közepén lévő portal közelében szóródik</li>
+                            <li>Amikor lejönnek a spiritek, a középső portalba rohannak az üldözettek</li>
+                            <li>Ha a közelbe értek a spiritek a külső portált használva újra visszatérnek középre</li>
                         </ul>
-                    </li>
-                </ul>
-            </li>
-        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card-container">
+            <div class="card bg-light">
+                <h5 class="card-header" id="Soul_Singe" data-toggle="collapse show" href="#Soul_SingeBody">
+                    <spell>Soul Singe</spell>
+                    <div class="float-right">
+                        <span class="badge badge-success">Healer</span>
+                    </div>
+                </h5>
+                <div class="card-body" id="Soul_SingeBody">
+                    <ul>
+                        <li>Random playerek szenvednek <dmg>3.2k Shadow</dmg> dmg-et</li>
+                        <li><span class="badge badge-success">Healer</span> A sebzés elkerülhetetlen, <strong>ki kell healelni</strong></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
 
         <h3>Phase 2</h3>
-        <ul>
-            <li>40% boss HP-ig tart</li>
-            <li>
-                <spell>SEED_NAME_MISSING <small>beta</small></spell>
-                <ul>
-                    <li>8 kék seed jelenik meg a mapen, fix helyeken</li>
-                    <li>20s eltaltével robbanak, 50 yardos közelükben megölve mindenkit</li>
-                    <li>
-                        A <spell>Seed</spell>-eket fel kell vinni és ki kell mozgatni a raidből
+
+        <div class="alert alert-info" role="alert">
+            <ul>
+                <li>40% boss HP-ig tart</li>
+                <li>A <span class="badge badge-primary">Tank</span> középen tartja a bosst</li>
+            </ul>
+        </div>
+
+
+        <div class="card-container">
+            <div class="card bg-light">
+                <h5 class="card-header" id="Root_of_Extinction" data-toggle="collapse show" href="#Root_of_ExtinctionBody">
+                    <spell>Root of Extinction</spell>
+                    <div class="float-right">
+                        <span class="badge badge-dark">Mindenki</span>
+                    </div>
+                </h5>
+                <div class="card-body" id="Root_of_ExtinctionBody">
+                    <ul>
+                        <li>Fix helyeken megjelenik 8 <spell>Seed of Extinction</spell></li>
+                        <li>20s elteltével robbanak, 50 yardos körben <dmg>62.4k Nature</dmg> sebeznek, megölve mindenkit</li>
+                        <li>A Seedeket a player fel tudja le tudja tenni máshol</li>
+                    </ul>
+                    <div class="alert alert-danger" role="alert">
                         <ul>
                             <li>Előre kiosztott player-seed párosokkal kezeljük a mechanikát</li>
-                            <li>A player felveszi a <spell>Seed</spell>-jét</li>
+                            <li>A player felveszi a <spell>Seed of Extinction</spell>-jét</li>
                             <li>A középső portallal kiviszi a külső portalhoz a lehető legtávolabb</li>
                             <li>Visszatér a portallal a bosshoz</li>
                             <li>A robbanás előtt mindenki a szoba átellenes végére rohan (nem használ portalt)</li>
                         </ul>
-                    </li>
-                </ul>
-            </li>
-        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-        <h3>Phase 3 - Execute</h3>
-        <ul>
-            <li>Az aktív tank áthúzza a boss-t a külső portalhoz, itt hal a boss</li>
-            <li>
-                <spell>WEAPON_NAME_MISSING <small>beta</small></spell>
-                <ul>
-                    <li>A szoba közepén spawnol egy nagy weapon</li>
-                    <li>Mindenkit maga felé húz - olyan erősen, hogy a legtöbb dash kevés ellene (vajon mit kell használni?)</li>
-                    <li>
-                        Igen, portalok...
+        <div class="card-container">
+            <div class="card bg-light">
+                <h5 class="card-header" id="Wilthering_Touch" data-toggle="collapse show" href="#Wilthering_TouchBody">
+                    <spell>Wilthering Touch</spell>
+                    <div class="float-right">
+                        <span class="badge badge-success">Healer</span>
+                    </div>
+                </h5>
+                <div class="card-body" id="Wilthering_TouchBody">
+                    <ul>
+                        <li>21s-es DoT: <dmg>6.8k Nature / 1.5s</dmg></li>
+                        <li><span class="badge badge-success">Healer</span> <strong>ki kell healelni</strong></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+        <h3>Phase 3</h3>
+
+        <div class="alert alert-info" role="alert">
+            <ul>
+                <li>Execute phase</li>
+                <li>A <span class="badge badge-primary">Tank</span> kihúzza a bosst a külső portalhoz</li>
+            </ul>
+        </div>
+
+        <div class="card-container">
+            <div class="card bg-light">
+                <h5 class="card-header" id="Edge_of_Annihilation" data-toggle="collapse show" href="#Edge_of_AnnihilationBody">
+                    <spell>Edge of Annihilation</spell>
+                    <div class="float-right">
+                        <span class="badge badge-dark">Mindenki</span>
+                    </div>
+                </h5>
+                <div class="card-body" id="Edge_of_AnnihilationBody">
+                    <ul>
+                        <li>A szoba közepén spawnol egy nagy weapon</li>
+                        <li>Egyre erősebben húzza magafelé a raidet</li>
+                        <li>Végül 25 yardos sugarú körben <dmg>155.9k Shadow</dmg> dmg-t oszt minden playernek</li>
+                    </ul>
+                    <div class="alert alert-danger" role="alert">
                         <ul>
+                            <li>Ebben a phase-ben a boss és a raid a külső portál közelében van</li>
                             <li>Hagyjuk, hogy a weapon behúzzon minket a belső portalhoz</li>
                             <li>Ha kell még rohanunk is felé, hogy a robbanás pillanatában már éppen visszatérjünk a külső portalra</li>
                         </ul>
-                    </li>
-                </ul>
-            </li>
-        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card-container">
+            <div class="card bg-light">
+                <h5 class="card-header" id="Aura_of_Dread" data-toggle="collapse show" href="#Aura_of_DreadBody">
+                    <spell>Aura of Dread</spell>
+                    <div class="float-right">
+                        <span class="badge badge-success">Healer</span>
+                    </div>
+                </h5>
+                <div class="card-body" id="Aura_of_DreadBody">
+                    <ul>
+                        <li>Raid-wide ticking dmg: <dmg>1.9k Shadow / 3s</dmg></li>
+                        <li><span class="badge badge-success">Healer</span> <strong>ki kell healelni</strong></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
 
     </div>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
