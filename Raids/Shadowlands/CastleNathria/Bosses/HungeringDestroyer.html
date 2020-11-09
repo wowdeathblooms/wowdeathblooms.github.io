@@ -2,11 +2,216 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <title></title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link href="../../../../css/Tax.css" rel="stylesheet" />
 </head>
 <body>
 
 
-    <h2>Hungering Destroyer</h2>
+<div>Dani comment: dűlörőe kéne jutni, hogy stackkeljünk vagy krumplizzunk</div>
 
-    ...
+<h2>Hungering Destroyer</h2>
+
+    <hr />
+    <a href="../Index.html"><< Back</a>
+    <hr />
+
+
+<div class="alert alert-info" role="alert">
+    <ul>
+        <li>A boss jobb lába mögött stackkelünk</li>
+        <li>Egészen a P3-ig középen tankoljuk</li>
+    </ul>
+</div>
+
+
+
+
+    <div class="card-container">
+        <div class="card bg-light">
+            <h5 class="card-header" id="Gluttonous_Miasma" data-toggle="collapse show" href="#Gluttonous_MiasmaBody">
+                <spell>Gluttonous Miasma</spell>
+                <div class="float-right">
+                    <span class="badge badge-dark">Mindenki</span>
+                </div>
+            </h5>
+            <div class="card-body" id="Gluttonous_MiasmaBody">
+                <ul>
+                    <li>2 random targetre kerülő debuff (egyszer csak egy megy ki, kettő lehet aktív egyszerre [cititation needed])</li>
+                    <li>5 yardos sugarú kör jelenik meg a playerek körül</li>
+                    <li>Immunisak lesznek minden healing recive-re</li>
+                    <li>
+                        24s-en keresztül minden másodpercben
+                        <ul>
+                            <li>Tickel rajtuk <dmg>2.5 Shadow</dmg> dmg</li>
+                            <li>Leachelnek 5 yardos sugarú körben mindne playertől 1k HP-t</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <div class="alert alert-danger" role="alert">
+                    <ul>
+                        <li>2db, egyenként 5 fős leacher csoport stackkel a targetekre</li>
+                        <li><span class="badge badge-success">Healer</span> Kitartja a csoportokat</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card-container">
+        <div class="card bg-light">
+            <h5 class="card-header" id="Consume" data-toggle="collapse show" href="#ConsumeBody">
+                <spell>Consume</spell>
+                <div class="float-right">
+                    <span class="badge badge-dark">Mindenki</span>
+                </div>
+            </h5>
+            <div class="card-body" id="ConsumeBody">
+                <ul>
+                    <li>A boss maga felé húzza a teljes raidet</li>
+                    <li>8s-en keresztül <dmg>15.5k HP / 2s</dmg> leecheli a playereket</li>
+                    <li>A távolsággal csökken a hatása</li>
+                    <li><strong>El kell futni a bosstól</strong></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="card-container">
+        <div class="card bg-light">
+            <h5 class="card-header" id="Expunge" data-toggle="collapse show" href="#ExpungeBody">
+                <spell>Expunge</spell>
+                <div class="float-right">
+                    <span class="badge badge-dark">Mindenki</span>
+                </div>
+            </h5>
+            <div class="card-body" id="ExpungeBody">
+                <ul>
+                    <li>Minden player körül megjeleneik egy kékt kör</li>
+                    <li>A kör sugara a missing HP-val aránylik (full hp -> kicsi kör; kevés hp -> nagy kör)</li>
+                    <li>A cast végén tobban, <dmg>14.1k Shadow</dmg> dmg-et osztva a körön belül mindenkinek</li>
+                    <li>A robbanás után egy <a href="#Obliterating_Rift"><spell>Obliterating Rift</spell></a> marad hátra</li>
+                    <li><span class="badge badge-success">Healer</span> Toppolni kell a raidet a cast előtt</li>
+                    <li>Hivemindhoz hasonlóan <strong>spreadelünk a cast előtt</strong></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="card-container">
+            <div class="card bg-light">
+                <h5 class="card-header" id="Obliterating_Rift" data-toggle="collapse show" href="#Obliterating_RiftBody">
+                    <spell>Obliterating Rift</spell>
+                    <div class="float-right">
+                        <span class="badge badge-dark">Mindenki</span>
+                    </div>
+                </h5>
+                <div class="card-body" id="Obliterating_RiftBody">
+                    <ul>
+                        <li>Az orbok on-contact <dmg>9.4 Shadow</dmg> dmg-et sebeznek</li>
+                        <li>Nem tűnnek el maguktól</li>
+                        <li><strong>Immunity-vel összeszedjük őket</strong></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card-container">
+        <div class="card bg-light">
+            <h5 class="card-header" id="Volatile_Ejection" data-toggle="collapse show" href="#Volatile_EjectionBody">
+                <spell>Volatile Ejection</spell>
+                <div class="float-right">
+                    <span class="badge badge-dark">Mindenki</span>
+                </div>
+            </h5>
+            <div class="card-body" id="Volatile_EjectionBody">
+                <ul>
+                    <li>Random playereket targetel</li>e
+                    <li>Marker a player feje felett, irányában kék nyíl</li>
+                    <li>A player vonalában sebez <dmg>7.8k Shadow</dmg> mindenkit</li>
+                    <li>Akit eltaált azon 24s-ig 500% dmg increase debuff van, <strong>a második hit megöl</strong></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="card-container">
+        <div class="card bg-light">
+            <h5 class="card-header" id="Desolate" data-toggle="collapse show" href="#DesolateBody">
+                <spell>Desolate</spell>
+                <div class="float-right">
+                    <span class="badge badge-success">Healer</span>
+                </div>
+            </h5>
+            <div class="card-body" id="DesolateBody">
+                <ul>
+                    <li>Raid-wide elkerülhetetlen <dmg>11.5k Shadow / player</dmg> dmg</li>
+                    <li><span class="badge badge-success">Healer</span> <strong>Ki kell healelni</strong></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="card-container">
+        <div class="card bg-light">
+            <h5 class="card-header" id="Overwhelm" data-toggle="collapse show" href="#OverwhelmBody">
+                <spell>Overwhelm</spell>
+                <div class="float-right">
+                    <span class="badge badge-primary">Tank</span>
+                </div>
+            </h5>
+            <div class="card-body" id="OverwhelmBody">
+                <ul>
+                    <li>Tankra üti a boss, instant <dmg>37.5k Physical</dmg> dmg</li>
+                </ul>
+
+                <div class="alert alert-danger" role="alert">
+                    Minden <spell>Overwhelm</spell> után tank-swappelni kell
+                </div>
+            </div>
+        </div>
+
+        <div class="card-container">
+            <div class="card bg-light">
+                <h5 class="card-header" id="Hungering_Strikes" data-toggle="collapse show" href="#Hungering_StrikesBody">
+                    <spell>Hungering Strikes</spell>
+                    <div class="float-right">
+                        <span class="badge badge-primary">Tank</span>
+                    </div>
+                </h5>
+                <div class="card-body" id="Hungering_StrikesBody">
+                    <ul>
+                        <li>Minden melee attack 3.9k HP-t leechel a tankról</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card-container">
+                <div class="card bg-light">
+                    <h5 class="card-header" id="Growing_Hunger" data-toggle="collapse show" href="#Growing_HungerBody">
+                        <spell>Growing Hunger</spell>
+                        <div class="float-right">
+                            <span class="badge badge-primary">Tank</span>
+                        </div>
+                    </h5>
+                    <div class="card-body" id="Growing_HungerBody">
+                        <ul>
+                            <li>Minden egymás követő melee attack 8%-kal tovább növeli a <a href="#Hungering_Strikes"><spell>Hungering Strikes</spell></a> hatását</li>
+                            <li>Target switchen a <spell>Growing Hunger</spell> resetelődik</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs="
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js" integrity="sha384-LtrjvnR4Twt/qOuYxE721u19sVFLVSA4hf/rRt6PrZTmiPltdZcI7q7PXQBYTKyf" crossorigin="anonymous"></script>
+</body>
+</html>
