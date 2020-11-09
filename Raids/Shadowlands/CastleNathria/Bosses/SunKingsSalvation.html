@@ -1,0 +1,448 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link href="../../../../css/Tax.css" rel="stylesheet" />
+</head>
+<body>
+
+
+    <div class="m-5 p-3">
+
+        <h2>Sun King's Salvation</h2>
+
+        <hr />
+        <a href="../Index.html"><< Back</a>
+        <hr />
+
+
+        <h3>Központi mechanika</h3>
+        <ul>
+            <li>A boss-t fel kell healelni 100% HP-ra (10% HP-ról)</li>
+            <li>
+                A boss egy emelt platformon fekszik a map végén
+                <ul>
+                    <li>Az AoE healing effectek nem érik el a bosst, ha lentre teszed</li>
+                    <li>Ha a boss alá teszed a paltformra, azt meg lent nem kapja meg a raid</li>
+                    <li>Nem cheeselhető totemmel</li>
+                </ul>
+            </li>
+            <li>Semmilyen ability-je nincs, nem csinál semmit a fight során</li>
+
+            <li>
+                <spell>Soul Pedestal</spell>
+                <ul>
+                    <li>4 kattintható pedestal található a boss két oldalán</li>
+                    <li>
+                        Kattintásra a player channelezni kezdi a <spell>Soul Infusion</spell>-t
+                        <ul>
+                            <li>15s-es channel, ami a player HP-ját transzfereli a bossba</li>
+                            <li>A <spell>Drained Soul</spell> debuff miatt percenként ként csak 1× használható / player</li>
+                            <li>A debuff miatt nem érdemes beszakítani a channelt</li>
+                            <li>A bekapott sebzés egyre nő, ahogy fogy a HP-je a playernek</li>
+                            <li>Az egyetlen mód ahogy egy non-healer player tud segíteni a healereknek</li>
+                            <li>Akkor is kattintható, amikor valaki más már használja, de ekkore megszakítja az eredeti playert (ne)</li>
+                            <li><small>A jelenlegi számok szerint nem éri meg használni, több mana kell a playerbe mint amennyit healel a bosson - változni fog prolly</small></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+        <h3>Ministers of Vice</h3>
+
+        <div class="alert alert-info" role="alert">
+            <ul>
+                <li>A fight során 5 különböző add group spawnolhat (+1 extra a pullon)</li>
+                <li>Egyelőre nem világos, hogy a mini-boss phase-ben is jönnek-e</li>
+                <li>Ahogy az sem, hogy pontosan miylen sorrendben (random/fix?) jönnek az egyes addok</li>
+            </ul>
+        </div>
+
+
+
+
+
+
+
+        <div class="card bg-light">
+            <h5 class="card-header" id="Rockbound_Vanquisher" data-toggle="collapse" href="#Rockbound_VanquisherBody">
+                <spell>Rockbound Vanquisher</spell>
+                <div class="float-right">
+                    <span class="badge badge-info">Solo</span>
+                    <span class="badge badge-info">Nem élhet sok castig</span>
+                </div>
+            </h5>
+            <div class="card-body collapse show" id="Rockbound_VanquisherBody">
+
+                <!--<img src="https://wow.zamimg.com/uploads/screenshots/normal/986074.jpg" style="width: 100%">-->
+                <div class="alert alert-info" role="alert">
+                    Nagy add, általában egyedül érkezik, a map közepére szál le
+                </div>
+
+                <ul>
+
+                    <li>
+                        <spell>Vanquishing Strike</spell> <span class="badge badge-primary">Tank</span>
+                        <ul>
+                            <li><dmg>12.5k Physical</dmg> tank dmg</li>
+                            <li>
+                                Minden cast egy stack <spell>Vanquished</spell>-t tesz a tankra
+                                <ul>
+                                    <li>20s-es DoT: <dmg>2.5k Physical / 1s / stack</dmg></li>
+                                </ul>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <spell>Concussive Smash</spell>
+                        <ul>
+                            <li><dmg>7.8k Physical</dmg> raid-wide dmg, nem szakítható, nem CC-zhető</li>
+                            <li>Minden cast egy stack <spell>Reverberation</spell>-t tesz az addra</li>
+                            <li>Minden stack 25%-kal növeli a <spell>Concussive Smash</spell> sebzését</li>
+                            <li>Magas prioritású add; <strong>nem castolhat sokat, halnia kell</strong></li>
+                            <li>Healereknek ki kell tartania a növekvő raid-wide dmg-et</li>
+                        </ul>
+                    </li>
+
+
+                </ul>
+            </div>
+        </div>
+
+        <div class="card bg-light">
+            <h5 class="card-header" id="Bleakwing_Assassin" data-toggle="collapse" href="#Bleakwing_AssassinBody">
+                <spell>Bleakwing Assassin</spell>
+                <div class="float-right">
+                    <span class="badge badge-info">Group (4-6)</span>
+                    <span class="badge badge-info">30% alatt prio</span>
+                </div>
+            </h5>
+            <div class="card-body collapse show" id="Bleakwing_AssassinBody">
+
+                <!--<img src="https://wow.zamimg.com/uploads/screenshots/normal/986075.jpg" class="card-img-top" alt="...">-->
+
+                <div class="alert alert-info" role="alert">
+                    A map két szélei körül repkednek, 4-6 mob egy csoportban
+                </div>
+
+                <ul>
+                    <li>
+                        <spell>Crimson Flurry</spell>
+                        <ul>
+                            <li>Random playert kitargetel majd ráteleportál <i>(vagy ráchargeol, ellentmondásos)</i></li>
+                            <li>8 yardban <dmg>11k Physical</dmg> sebez mindenkit</li>
+                            <li>10s-es DoT: <dmg>2.2k Phyiscal / 1s</dmg></li>
+                            <li><strong>Ki kell vinni a raidből</strong></li>
+                            <li>Ne akarj kidashelni belőle (ráhúzod másra véletlenül)</li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <spell>Return to Stone</spell>
+                        <ul>
+                            <li>30% HP-t elérve castolja a boss 8s-ig</li>
+                            <li>Ha beér a cast, 100%-ra healeli magát a mob</li>
+                            <li><span class="badge badge-danger">Dps</span> Nem szakítható, <strong>30% alatt top-prio</strong></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="card bg-light">
+            <h5 class="card-header" id="Vile_Occultist" data-toggle="collapse" href="#Vile OccultistBody">
+                <spell>Vile Occultist</spell>
+                <div class="float-right">
+                    <span class="badge badge-info">Graoup (4-6)</span>
+                    <span class="badge badge-info">CC</span>
+                    <span class="badge badge-info">Interrupt</span>
+                    <span class="badge badge-info">Healing</span>
+                </div>
+            </h5>
+            <div class="card-body collapse show" id="Vile_OccultistBody">
+
+                <!--<img src="https://wow.zamimg.com/uploads/screenshots/normal/986084.jpg" class="card-img-top" alt="...">-->
+
+                <div class="alert alert-info" role="alert">
+                    <ul>
+                        <li>A map közepén jelenik meg 3-5 darab</li>
+                        <li>Az encounter elején a szoba két szélén van belőlük egy-egy darab</li>
+                    </ul>
+                </div>
+
+                <ul>
+                    <li>
+                        <spell>Vulgar Brand</spell>
+                        <ul>
+                            <li><strong>Szakítandó</strong> 6s-es cast, random player a target</li>
+                            <li>
+                                Ha nincs beszakítva
+                                <ul>
+                                    <li>35% dmg taken increase debuffot kap a target</li>
+                                    <li>És egy <dmg>1.3k Shadow</dmg> init dmg-et</li>
+                                    <li>A debuffot azonnal <strong>dispellezni kell</strong></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <spell>Carrying Essence Font</spell>
+                        <ul>
+                            <li>Amikor az add meghal, egy friendly NPC-t spawnol, ami lassan veszíti a HP-t</li>
+                            <li>Felhealelve az NPC-t a boss 2% HP-t nyer; nagyon mana hatékony</li>
+                            <li><span class="badge badge-success">Healer</span> <strong>ki kell healelni a Fontokat</strong> (megjelenik a boss frame-en is)</li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <spell>Scornful Blast</spell>
+                        <ul>
+                            <li>Random playerre castolha (1.5s), <dmg>3.9k Shadow</dmg> dmg</li>
+                            <li>Trigger-happy bait, <strong>ne szakítsd</strong></li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <spell>Door of Shadows</spell>
+                        <ul>
+                            <li>CC-zhető, CC-ezndő cast</li>
+                            <li>Random helyre teleportál az add; meleenek idegesítő</li>
+                        </ul>
+                    </li>
+
+
+                </ul>
+            </div>
+        </div>
+
+        <div class="card bg-light">
+            <h5 class="card-header" id="Pestering_Fiend" data-toggle="collapse" href="#Pestering_FiendBody">
+                <spell>Pestering Fiend</spell>
+                <div class="float-right">
+                    <span class="badge badge-info">Group (8+)</span>
+                    <span class="badge badge-info">Spread</span>
+                    <span class="badge badge-info">Displacement</span>
+                    <span class="badge badge-info">Explode</span>
+                </div>
+            </h5>
+            <div class="card-body collapse show" id="Pestering_FiendBody">
+                <!--<img src="https://wow.zamimg.com/uploads/screenshots/normal/986085.jpg" class="card-img-top" alt="...">-->
+
+                <div class="alert alert-info" role="alert">
+                    Nagyobb, 8-as csoportokban érkeznek a map közepén szétszórva
+                </div>
+
+                <ul>
+
+                    <li>
+                        <spell>Shattering Ruby</spell>
+                        <ul>
+                            <li>Szakítható, de <strong>nem szakítandó</strong> cast (csak újrakezdi) egy random targetre</li>
+                            <li>3 yardos körben <dmg>3.2k Phyisical</dmg> sebez a target körül, <strong>szóródni kell</strong></li>
+                            <li>Spawn-t követően <strong>össze kell húzni őket</strong> és leadrálni</li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <spell>Fragmentation</spell>
+                        <ul>
+                            <li>Az add halálakor robban, 7 yardban <dmg>7.8k Physical</dmg> dmg-et oszt</li>
+                            <li>Ne legyen player a low HP-s add közelében</li>
+                            <li>No-melee&trade; tax activated</li>
+                        </ul>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+
+        <div class="card bg-light">
+            <h5 class="card-header" id="Soul_Infuser" data-toggle="collapse" href="#Soul_InfuserBody">
+                <spell>Soul Infuser</spell>
+                <div class="float-right">
+                    <span class="badge badge-info">Group (8+)</span>
+                    <span class="badge badge-info">Healing Orb</span>
+                    <span class="badge badge-info">Hard CC</span>
+                    <span class="badge badge-info">Top prio</span>
+                </div>
+            </h5>
+            <div class="card-body collapse show" id="Soul_InfuserBody">
+                <!--<img src="https://wow.zamimg.com/uploads/screenshots/normal/986072.jpg" class="card-img-top" alt="...">-->
+
+
+                <div class="alert alert-info" role="alert">
+                    <ul>
+                        <li>A map két szélén, két kisebb (1-3) csoportokban spawnolnak</li>
+                        <li>Amint lejöttek, odarohannak a <spell>Soul Pedestal</spell>-okhoz</li>
+                    </ul>
+                </div>
+
+                <ul>
+                    
+
+                    <li>
+                        <spell>Soul Infusion</spell>
+                        <ul>
+                            <li>A Pedestalnál channelezik</li>
+                            <li>Ha él a <spell>Shade of Kael'thas</spell> azt healeli, ha nem, a boss-t öli</li>
+                            <li>Nem érhetnek oda a <spell>Soul Pedestal</spell>-okhoz</li>
+                            <li>Az egyik oldalt hard CC-zzük, amíg a másik oldalt lenukoljuk top-prioval</li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <spell>Infuser's Orb</spell> <span class="badge badge-success">Healer</span>
+                        <ul>
+                            <li>Az add halálával spawnol a holttesten</li>
+                            <li>
+                                Kattintható orb, ami egy <spell>Infuser's Boon</spell> buffot ad a palyernek
+                                <ul>
+                                    <li>+50% healing done 14 másodpercre</li>
+                                    <li>Stackkel, a timer resetelődik minden további interractnál</li>
+                                    <li>Egy vagy több healer veszi fel staggered, healelik a bosst</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="card bg-light">
+            <h5 class="card-header" id="High_Torturer_Darithos" data-toggle="collapse" href="#High_Torturer_DarithosBody">
+                <spell>High Torturer Darithos</spell>
+                <div class="float-right">
+                    <span class="badge badge-info">Single</span>
+                    <span class="badge badge-info">On pull</span>
+                    <span class="badge badge-info">Spread</span>
+                    <span class="badge badge-info">Low prio</span>
+                </div>
+            </h5>
+            <div class="card-body collapse show" id="High_Torturer_DarithosBody">
+                <!--<img src="https://wow.zamimg.com/uploads/screenshots/normal/986078.jpg" class="card-img-top" alt="...">-->
+
+
+                <div class="alert alert-info" role="alert">
+                    Egyetlen add az encounter elején, nem spawnol újra
+                </div>
+
+                <ul>
+                    <li>
+                        <spell>Greater Castigation</spell>
+                        <ul>
+                            <li>Random playerekre channelezi 6s-igs</li>
+                            <li><dmg>2.7k Shadow / 0.5s</dmg> dmg tickkel a target 6y-os sugarú körében mindenkin</li>
+                            <li>Szórodni kell, de nem jelent nagyon komoly veszélyt</li>
+                        </ul>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+
+
+
+
+        <h3>Shade of Kael'thas</h3>
+
+        <div class="alert alert-info" role="alert">
+            <ul>
+                <li>
+                    Az encounter során 2× spawnoló mini-boss
+                    <ol>
+                        <li>@Boss HP 40%: ekkor 60% HP-val</li>
+                        <li>@Boss HP 90%: ekkor 10% HP-val</li>
+                    </ol>
+                </li>
+                <li>Mindkétszer 10% HP-t kell róla leverni</li>
+                <li>A második spawn után vége az encounternek</li>
+                <li>Amíg él, közvetlenül nem healelhető a boss, de a beleütött dmg-et HP-ként megkapja a boss</li>
+                <li>Ami add él a spawn pillanatában, megmarad <small>(kérdéses, hogy újak spawnolnak-e)</small></li>
+            </ul>
+        </div>
+
+        <ul>
+
+
+            <li class="mb-3">
+                <spell>Fiery Strike</spell> <Badge Color="Color.Primary">Tank</Badge>
+                <ul>
+                    <li>Tank felé, 12 yardos cone-ban sebező fire dmg</li>
+                    <li>
+                        Minden eltaláltra tesz egy <spell>Burning Remnants</spell> debuffot
+                        <ul>
+                            <li>15s-es fire DoT ami stackkel</li>
+                            <li>A tanknak el kell fordítani a raidtől a bosst</li>
+                            <li>A raid a mini-boss mögött kell álljon</li>
+                            <li>Tank swap ~3 stack magasságában</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <li class="mb-3">
+                <spell>Blazing Surge</spell>
+
+                <ul>
+                    <li>100 energy-nél castolja 2.5s-ig a mini boss</li>
+                    <li>40 yardos frontal cone random targetre</li>
+                    <li>Az ability nem követi le a target mozgását <strong>mindenki side-steppel</strong></li>
+                    <li>A beta test ellent mond a journalnak, nincs <spell>Smoldering Remnant</spell>?</li>
+                </ul>
+            </li>
+
+            <li class="mb-3">
+                <spell>Reborn Phoenix</spell>
+
+                <ul>
+                    <li>A mini-boss két oldalán megjelenik egy-egy főnix <small>Ellentmondás: máshol meg a szoba közepén <string>mindig</string></small></li>
+                    <li>A főnixek random playerekre fixálnak, követik a targetjeiket</li>
+                    <li>Ha utolérik, melee-znek (pro-tip: kite-old)</li>
+                    <li>
+                        <spell>Smoldering Plumage</spell>
+                        <ul>
+                            <li>2.5s-enként az add 6 yardos sugarú körében sebez</li>
+                            <li>Minden pulse egy <spell>Smoldering Remnants</spell> patch-et dob le (1p-ig lent is marad)</li>
+                        </ul>
+                    </li>
+                    <li>Az add sosem hal meg, 0% HP-ről fokozatosan visszahealeli magát</li>
+                    <li>Amíg regenerálódik nem üthető</li>
+                    <li>A mini-boss eltűnésével a főnixek is eltűnnek (fun fact: mythicen maradnak)</li>
+                    <li>Az addok CC-zhetőek, lökdöshetőek</li>
+                    <li>A ranged-nek le top priority target, hogy regen fázisba essen</li>
+                    <li>Nem világos, hogy pontosan hol célszerű őket tartani, de akárhol is, maradjanak ott</li>
+                </ul>
+            </li>
+
+
+            <li class="mb-3">
+                <spell>Ember Blast</spell>
+                <ul>
+                    <li>Random non-tank playert jelöl fel</li>
+                    <li>
+                        A target körül kioszt
+                        <ol>
+                            <li>Nagyon nagy init fire dmg</li>
+                            <li>6 stack <spell>Lingering Embers</spell> debuffot (2k fire / 1s, 15s-ig DoT)</li>
+                            <li>1 <spell>Smoldering Remnants</spell> piros tócsát</li>
+                        </ol>
+                    </li>
+                    <li>Az init dmg és a stackek is oszlanak a player 6 yardú sugarú körében</li>
+                    <li>6 ember soakolja a dmg-et</li>
+                    <li>A <spell>Smoldering Remnants</spell> patch miatt low-traffic area-ban kell soakolni</li>
+                </ul>
+            </li>
+
+        </ul>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs="
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js" integrity="sha384-LtrjvnR4Twt/qOuYxE721u19sVFLVSA4hf/rRt6PrZTmiPltdZcI7q7PXQBYTKyf" crossorigin="anonymous"></script>
+</body>
+</html>

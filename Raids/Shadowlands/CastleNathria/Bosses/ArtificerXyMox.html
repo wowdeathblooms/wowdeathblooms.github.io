@@ -1,0 +1,162 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link href="../../../../css/Tax.css" rel="stylesheet" />
+</head>
+<body>
+
+
+    <div class="m-5 p-3">
+        <h2>Artificer Xy'Mox</h2>
+
+        <hr />
+        <a href="../Index.html"><< Back</a>
+        <hr />
+
+        <p>
+            <Badge Color="Color.Info">Single Target</Badge>
+            <Badge Color="Color.Info">BL pullon vagy problémás phase-ben</Badge>
+            <Badge Color="Color.Info">2/4/14</Badge>
+        </p>
+
+
+        <h3>Portálok - <spell>Dimensional Tear</spell></h3>
+        <ul>
+            <li>A boss felmarkol két radnom non-tank playert a debuffal</li>
+            <li>8s elteltével robban, létrehozva egy portalt (csekély arcane dmg-et osztva 6 yardban)</li>
+            <li>Egy portalon átfutva a player a másik portalra teleportál (nem kell interractolni a portállal)</li>
+            <li>Pár másodperc elteltével a portál újra használhatóvá válik</li>
+            <li><small>A portálok használat után internal CD-re kerülnek pár másodpercre?</small></li>
+            <li>Amikor a boss újra castolja a <spell>Dimensional Tear</spell>-t, az előző portálok eltűnnek, az újak veszik át a helyüket</li>
+            <li>Az encounter legtöbb mechanikáját a portálokkal kell counterelnie a raidnek</li>
+            <li>
+                <strong>Fix portál pozíciók</strong>
+                <ol>
+                    <li>Az egyik portál a szoba közepére kerül</li>
+                    <li>A másik portál a szoba feljelölt végébe (~kör alakú, mindegy, hogy pontosan hova)</li>
+                </ol>
+            </li>
+        </ul>
+
+        <h3>Ability-k</h3>
+        <ul>
+
+            <li class="mb-2">
+                <spell>Glyph of Destruction</spell> <Badge Color="Color.Primary">Tank</Badge>
+                <ul>
+                    <li>A main-tankra castolja a boss</li>
+                    <li>
+                        4s elteltével berobban
+                        <ul>
+                            <li>A távolsággal fordítottan arányos a sebzése</li>
+                            <li>Olyan messze kell vinni a raidtől, amennyire csak lehet</li>
+                            <li>A tankra kerül egy <spell>Arcane Vulnerability</spell> debuff 45s-re, ami az explosion okozta sebzést felskálázza</li>
+                            <li>A debuff miatt muszáj minden <spell>Glyph of Destruction</spell> után tank swappelni</li>
+                            <li>A tank a bosshoz közelebbi portalt használja, hogy eltávolodjon a raidtől</li>
+                            <li>Az off-tank ekkor tauntolja át, hogy a boss ne rohangáljon fel-alá</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <li class="mb-2">
+                <spell>Rift Blast</spell>
+                <ul>
+                    <li>Fehét beamek amik a bossból indulnak ki sugár irányba</li>
+                    <li><small>Random playert választ vajon vagy teljesen random, hogy merre vannak a beamek?</small></li>
+                    <li>A beameket dodge-olni kell</li>
+                </ul>
+            </li>
+
+            <li class="mb-2">
+                <spell>Hyperlight Spark</spell>
+                <ul>
+                    <li>Elkerülhetetlen raid-wide arcane dmg</li>
+                    <li>A healerek szórakoztatására szolgál, ki kell healelni</li>
+                </ul>
+            </li>
+
+            <li class="mb-2">
+                <spell>Stasis Trap</spell>
+                <ul>
+                    <li>Random non-tank playerre kerül</li>
+                    <li>A player alatt megjelenik egy fehét trap</li>
+                    <li>Ha később valaki belelép stunnol, a többieknek kell kiütni az áldozatot</li>
+                    <li>Low-traffic area-ba kivisszük</li>
+                    <li>Előre meghatározott immunity playerek összeszedik ha már bosszantó mennyiségű összegyűlt</li>
+                </ul>
+            </li>
+
+        </ul>
+
+        <h3>Phase 1</h3>
+        <ul>
+            <li>70% boss HP-ig tart</li>
+            <li>
+                <spell>SPIRIT_NAME_MISSING <small>beta</small></spell>
+                <ul>
+                    <li>Megjelenik több <spell>Spirit</spell>, mindegyik egy random playerre fixál</li>
+                    <li>A targetjük felé rohannak, ha utolérik a playert: MC-be kerülnek és ki kell ütni őket</li>
+                    <li>
+                        A <spell>Spiritek</spell> nagyon gyorsan futnak, nem sok idő van reagálni
+                        <ul>
+                            <li>Mindenki a szoba közepe felé orientálódik az első phase alatt</li>
+                            <li>A fixated playerek azonnal belerohannak a középső portalba</li>
+                            <li>A Spiritek 12s-ig élnek, a portalokat esetenként visszafelé is kell használni, ha még üldözi a playert a Spiritje</li>
+                            <li><small>Beta concern: Ha shared a portalon az ICD az mindent felborít</small></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+        <h3>Phase 2</h3>
+        <ul>
+            <li>40% boss HP-ig tart</li>
+            <li>
+                <spell>SEED_NAME_MISSING <small>beta</small></spell>
+                <ul>
+                    <li>8 kék seed jelenik meg a mapen, fix helyeken</li>
+                    <li>20s eltaltével robbanak, 50 yardos közelükben megölve mindenkit</li>
+                    <li>
+                        A <spell>Seed</spell>-eket fel kell vinni és ki kell mozgatni a raidből
+                        <ul>
+                            <li>Előre kiosztott player-seed párosokkal kezeljük a mechanikát</li>
+                            <li>A player felveszi a <spell>Seed</spell>-jét</li>
+                            <li>A középső portallal kiviszi a külső portalhoz a lehető legtávolabb</li>
+                            <li>Visszatér a portallal a bosshoz</li>
+                            <li>A robbanás előtt mindenki a szoba átellenes végére rohan (nem használ portalt)</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+        <h3>Phase 3 - Execute</h3>
+        <ul>
+            <li>Az aktív tank áthúzza a boss-t a külső portalhoz, itt hal a boss</li>
+            <li>
+                <spell>WEAPON_NAME_MISSING <small>beta</small></spell>
+                <ul>
+                    <li>A szoba közepén spawnol egy nagy weapon</li>
+                    <li>Mindenkit maga felé húz - olyan erősen, hogy a legtöbb dash kevés ellene (vajon mit kell használni?)</li>
+                    <li>
+                        Igen, portalok...
+                        <ul>
+                            <li>Hagyjuk, hogy a weapon behúzzon minket a belső portalhoz</li>
+                            <li>Ha kell még rohanunk is felé, hogy a robbanás pillanatában már éppen visszatérjünk a külső portalra</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs="
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js" integrity="sha384-LtrjvnR4Twt/qOuYxE721u19sVFLVSA4hf/rRt6PrZTmiPltdZcI7q7PXQBYTKyf" crossorigin="anonymous"></script>
+</body>
+</html>
