@@ -1,6 +1,14 @@
 ﻿body {
 }
 
+.bg-lightdanger {
+    background-color: #ffe8e8;
+}
+
+.bg-lighwarning {
+    background-color: #fffcd9;
+}
+
 spell {
     color: blueviolet;
     /*font-weight: bold;*/
