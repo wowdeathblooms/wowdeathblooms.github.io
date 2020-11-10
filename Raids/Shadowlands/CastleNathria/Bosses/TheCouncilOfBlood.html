@@ -1,3 +1,310 @@
-﻿@page "/raids/shadowlands/castlenathria/bosses/thecouncilofblood"
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link href="../../../../css/Tax.css" rel="stylesheet" />
+</head>
+<body>
 
-<h2>The Council of Blood</h2>
+    <div class="m-5 p-3">
+
+        <h2>The Council of Blood</h2>
+
+        <hr />
+        <a href="../Index.html"><< Back</a>
+        <hr />
+
+
+        <div class="card-deck">
+
+            <div class="card">
+                <h5 class="card-header" id="Castellan_Niklaus" data-toggle="collapse" href="#Castellan_NiklausBody">
+                    <spell>Castellan Niklaus</spell>
+                    <div class="float-right">
+                        <span class="badge badge-dark">Mindenki</span>
+                    </div>
+                </h5>
+                <div class="card-body collapse show" id="Castellan_NiklausBody">
+
+                    <div class="alert alert-info" role="alert">
+                        <ul>
+                            <li>nem tankholható, random targetekre charge-olgat</li>
+                        </ul>
+                    </div>
+
+                    <div class="card bg-light mb-3">
+                        <h5 class="card-header" id="Tactical_Advance" data-toggle="collapse" href="#Tactical_AdvanceBody">
+                            <spell>Tactical Advance</spell>
+                            <div class="float-right">
+                                <span class="badge badge-dark">Mindenki</span>
+                            </div>
+                        </h5>
+                        <div class="card-body collapse show" id="Tactical_AdvanceBody">
+                            <ul>
+                                <li>Random playerre charge-ol a boss, <dmg>76 Physical</dmg> dmg-et ütve (béta-note: gyanúsan kicsi szám...)</li>
+                                <li>A boss útjában álló minden playert stunnol</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="card bg-light">
+                        <h5 class="card-header" id="Unyielding_Shield" data-toggle="collapse" href="#Unyielding_ShieldBody">
+                            <spell>Unyielding Shield</spell>
+                            <div class="float-right">
+                                <span class="badge badge-dark">Mindenki</span>
+                            </div>
+                        </h5>
+                        <div class="card-body collapse show" id="Unyielding_ShieldBody">
+                            <ul>
+                                <li>Summonol egy 20 yard sugarú shieldet amiben a boss-ok 90% dmg reduction-t kapnak</li>
+                                <li>A pajzsot le kell ütni</li>
+                                <li>Ha sokáig tart (ne tartson), a bosst ki kell húzni a pajzsból</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="card-footer">
+                    <h5>Infused with Anima</h5>
+
+                    <div class="card bg-warning mb-3">
+                        <h5 class="card-header" id="Unstoppable_Charge" data-toggle="collapse" href="#Unstoppable_ChargeBody">
+                            <spell>Unstoppable Charge</spell>
+                            <div class="float-right">
+                                <span class="badge badge-dark">Mindenki</span>
+                            </div>
+                        </h5>
+                        <div class="card-body collapse show" id="Unstoppable_ChargeBody">
+                            <ul>
+                                <li>Kiváltja az eredeti <a href="#Tactical_Advance"><spell>Tactical Advance</spell></a> charge-ot</li>
+                                <li>Soakolandó <dmg>93.6k Shadow</dmg> frontal cone dmg</li>
+                                <li>Vagy a tank fordítja be a raidbe, vagy a raid fut oda</li>
+                                <li>Ha győzzük self CD-kel, a tank solozhatja</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <h5>Empowered with Anima</h5>
+                    <div class="card bg-warning">
+                        <h5 class="card-header" id="Castellans_Cadre" data-toggle="collapse" href="#Castellans_CadreBody">
+                            <spell>Castellan's Cadre</spell>
+                            <div class="float-right">
+                                <span class="badge badge-dark">Mindenki</span>
+                            </div>
+                        </h5>
+                        <div class="card-body collapse show" id="Castellans_CadreBody">
+                            <ul>
+                                <li>Leidéz 2 <spell>Veteran Stoneguardot</spell> amik random playerekre fixálnak</li>
+                                <li>12s-ig üldözik a targetjeiket, majd target váltnak</li>
+                                <li>Ha meghalnak, újak jönnek helyettük</li>
+                                <li>Célszerűbb csak simán megölni a boss-t</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="card">
+                <h5 class="card-header" id="Baroness_Frieda" data-toggle="collapse" href="#Baroness_FriedaBody">
+                    <spell>Baroness Frieda</spell>
+                    <div class="float-right">
+                        <span class="badge badge-dark">Mindenki</span>
+                    </div>
+                </h5>
+                <div class="card-body collapse show" id="Baroness_FriedaBody">
+
+                    <div class="card bg-light mb-3">
+                        <h5 class="card-header" id="Drain_Essence" data-toggle="collapse" href="#Drain_EssenceBody">
+                            <spell>Drain Essence</spell>
+                            <div class="float-right">
+                                <span class="badge badge-dark">Mindenki</span>
+                            </div>
+                        </h5>
+                        <div class="card-body collapse show" id="Drain_EssenceBody">
+                            <ul>
+                                <li>Az aktív targetre kerülő devuff</li>
+                                <li>6s-es channel <dmg>1% HP / tick</dmg> 1 percre</li>
+                                <li>Immunity vagy tank-swap szükséges</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="card bg-light mb-3">
+                        <h5 class="card-header" id="Bolt_of_Power" data-toggle="collapse" href="#Bolt_of_PowerBody">
+                            <spell>Bolt of Power</spell>
+                            <div class="float-right">
+                                <span class="badge badge-dark">Mindenki</span>
+                            </div>
+                        </h5>
+                        <div class="card-body collapse show" id="Bolt_of_PowerBody">
+                            <ul>
+                                <li>Szakítható/szakítandó cast</li>
+                                <li>Random player targetel, <dmg>9.4k Shadow</dmg> dmg-et üt</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="card bg-light">
+                        <h5 class="card-header" id="Anima_Fountain" data-toggle="collapse" href="#Anima_FountainBody">
+                            <spell>Anima Fountain</spell>
+                            <div class="float-right">
+                                <span class="badge badge-dark">Mindenki</span>
+                            </div>
+                        </h5>
+                        <div class="card-body collapse show" id="Anima_FountainBody">
+                            <ul>
+                                <li>6s-es AoE a boss körül ami 5 yardon belül <dmg>15.6k Shadow</dmg> dmg-et oszt mindenkinek</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="card-footer bg-light">
+
+                    <h5>Infused with Anima</h5>
+                    <div class="card bg-warning mb-3">
+                        <h5 class="card-header" id="Scarlet_Letter" data-toggle="collapse" href="#Scarlet_LetterBody">
+                            <spell>Scarlet Letter</spell>
+                            <div class="float-right">
+                                <span class="badge badge-dark">Mindenki</span>
+                            </div>
+                        </h5>
+                        <div class="card-body collapse show" id="Scarlet_LetterBody">
+                            <ul>
+                                <li>Random targetret feljelöl egy <spell>Venthyr</spell> rúnával</li>
+                                <li>A player a target szélére teleportál, 8s-ig stunned</li>
+                                <li>Amikor lejár <dmg>62.4 Shadow</dmg>-et oszt 7 yardos sugarú körben</li>
+                                <li>Soakolnia kell előre kijelölt csoportoknak</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <h5>Empowered with Anima</h5>
+                    <div class="card bg-warning">
+                        <h5 class="card-header" id="Dredger_Servants" data-toggle="collapse" href="#Dredger_ServantsBody">
+                            <spell>Dredger Servants</spell>
+                            <div class="float-right">
+                                <span class="badge badge-dark">Mindenki</span>
+                            </div>
+                        </h5>
+                        <div class="card-body collapse show" id="Dredger_ServantsBody">
+                            <ul>
+                                <li>A boss leidéz sok <spell>Begrudging Waiter</spell>-t</li>
+                                <li>A kis addok random playereket dobálnak <dmg>1.3k Nature</dmg> dmg-et okozva</li>
+                                <li>Bétán látványosan kicsit ütnek, ha felscale-elig a számokat, nasty lesz</li>
+                            </ul>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+            <div class="card">
+                <h5 class="card-header" id="Lord_Stavros" data-toggle="collapse" href="#Lord_StavrosBody">
+                    <spell>Lord Stavros</spell>
+                    <div class="float-right">
+                        <span class="badge badge-dark">Mindenki</span>
+                    </div>
+                </h5>
+                <div class="card-body collapse show" id="Lord_StavrosBody">
+
+                    <div class="card bg-light mb-3">
+                        <h5 class="card-header" id="Evasive_Lunge" data-toggle="collapse" href="#Evasive_LungeBody">
+                            <spell>Evasive Lunge</spell>
+                            <div class="float-right">
+                                <span class="badge badge-dark">Mindenki</span>
+                            </div>
+                        </h5>
+                        <div class="card-body collapse show" id="Evasive_LungeBody">
+                            <ul>
+                                <li>A tank mögé teleportál a boss és charge-ol</li>
+                                <li>20 yardos frontal cone-ban sebez <dmg>23.4k Physical</dmg>-t</li>
+                                <li>Working-theory: literally a tank háta mögé spawnol vagyis a tanknak kell úgy fordulnia, hogy ne kapjon el másokat a charge</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="card bg-light">
+                        <h5 class="card-header" id="Waltz_of_Blood" data-toggle="collapse" href="#Waltz_of_BloodBody">
+                            <spell>Waltz of Blood</spell>
+                            <div class="float-right">
+                                <span class="badge badge-dark">Mindenki</span>
+                            </div>
+                        </h5>
+                        <div class="card-body collapse show" id="Waltz_of_BloodBody">
+                            <ul>
+                                <li>A szoba két oldalán spawnol egy rakás <spell>Waltzinh Venthyr</spell>-t</li>
+                                <li>
+                                    Keresztül masíroznak a szobán, aki hozzájuk ér:
+                                    <ul>
+                                        <li>Stunnolódik 1s-re</li>
+                                        <li>Kap <dmg>4.7k Physical</dmg> dmg-et</li>
+                                    </ul>
+                                </li>
+                                <li>Könnyen kikerülhetőek, de ha viselhető a tick dmg, a tánctér is elhagyható</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="card-footer">
+                    <h5>Infused with Anima</h5>
+
+                    <div class="card bg-warning">
+                        <h5 class="card-header" id="Dark_Recital" data-toggle="collapse" href="#Dark_RecitalBody">
+                            <spell>Dark Recital</spell>
+                            <div class="float-right">
+                                <span class="badge badge-dark">Mindenki</span>
+                            </div>
+                        </h5>
+                        <div class="card-body collapse show" id="Dark_RecitalBody">
+                            <ul>
+                                <li>Random playereket párba állít</li>
+                                <li>Amíg a párok 8 yardnál messzebb vannak egymástól <dmg>2.5k Shadow / 0.5s</dmg> DoT ketyeg rajtuk</li>
+                                <li>A playereknek mozogniuk kell, ha megállnak <dmg>4.7k Shadow / 0.5s</dmg> DoT ketyeg</li>
+                                <li>Praktikusan egy Azshara-s "Stand Together" + "Marching" debuff páros</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <h5>Empowered with Anima</h5>
+
+                    <div class="card bg-warning">
+                        <h5 class="card-header" id="Dancing_Fools" data-toggle="collapse" href="#Dancing_FoolsBody">
+                            <spell>Dancing Fools</spell>
+                            <div class="float-right">
+                                <span class="badge badge-dark">Mindenki</span>
+                            </div>
+                        </h5>
+                        <div class="card-body collapse show" id="Dancing_FoolsBody">
+                            <ul>
+                                <li>A boss behívja az összes <spell>Waltzing Venthyr</spell> barátját, akik random táncolnak</li>
+                                <li>Az addok körül piros <spell>Waltz of Blood</spell> kör látható</li>
+                                <li>A körhöz érve a player 75%-kal lassul és <dmg>0.7k Shadow / 1.5s</dmg> ticking dmg-et kap</li>
+                                <li>Az addok <dmg>5% HP / 0.5s</dmg> healelődnek, immunisak minden AoE spellre</li>
+                                <li>A <spell>Waltz of Blood</spell> mérete az add HP-jától függ</li>
+                                <li>Beta tesztenek az addok 30s után üthetőek, addig CC-zhetőek, a journal erről nem ejt szót</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs="
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js" integrity="sha384-LtrjvnR4Twt/qOuYxE721u19sVFLVSA4hf/rRt6PrZTmiPltdZcI7q7PXQBYTKyf" crossorigin="anonymous"></script>
+
+
+</body>
+</html>
