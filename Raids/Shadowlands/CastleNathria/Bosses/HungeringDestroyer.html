@@ -8,8 +8,10 @@
 <body>
 
 
-<div class="m-5 p-3">
-        <h2>Hungering Destroyer</h2>
+    <div class="m-5 p-3">
+    <h2>Hungering Destroyer
+        <a href="#" role="button" id="ToggleAll" class="btn btn-primary float-right">Toggle all</a>
+        </h2>
 
         <hr />
         <a href="../Index.html"><< Back</a>
@@ -26,7 +28,7 @@
 
 
 
-        <div class="card bg-light">
+        <div class="card bg-light mb-3">
             <h5 class="card-header" id="Gluttonous_Miasma" data-toggle="collapse" href="#Gluttonous_MiasmaBody">
                 <spell>Gluttonous Miasma</spell>
                 <div class="float-right">
@@ -102,8 +104,6 @@
                 </div>
             </h5>
             <div class="card-body collapse show" id="ExpungeBody">
-
-
                 <div class="row">
                     <div class="col-xl-9 col-12">
                         <ul>
@@ -123,42 +123,44 @@
 
             </div>
 
-            <div class="card bg-light">
-                <h5 class="card-header" id="Obliterating_Rift" data-toggle="collapse" href="#Obliterating_RiftBody">
-                    <spell>Obliterating Rift</spell>
-                    <div class="float-right">
-                        <span class="badge badge-dark">Mindenki</span>
-                        <span class="badge badge-info">Orb</span>
-                        <span class="badge badge-info">Pick-up</span>
-                        <span class="badge badge-info">Immunity</span>
-                    </div>
-                </h5>
-                <div class="card-body collapse show" id="Obliterating_RiftBody">
 
-                    <div class="row">
-                        <div class="col-xl-9 col-12">
-                            <ul>
-                                <li>Az orbok on-contact <dmg>9.4 Shadow</dmg> dmg-et sebeznek</li>
-                                <li>Nem tűnnek el maguktól</li>
-                                <li>
-                                    Három opciónk van:
-                                    <ul>
-                                        <li>Ha a raid HP-ja engedi, mindneki felszedi a saját orbját</li>
-                                        <li>Ha van elég immunity class, immunity-vel szedjük</li>
-                                        <li>Az off tank a közeli orbokat összeszedi</li>
-                                    </ul>
-                                </li>
+        </div>
 
-                            </ul>
-                        </div>
-
-                        <div class="col-xl-3 col-12">
-                            <img style="width: 100%" src="../../../../assets/raids/shadowlands/castlenathria/HungeringDestroyer_ObliteratingRift.gif" />
-                        </div>
-                    </div>
-
-
+        <div class="card bg-light">
+            <h5 class="card-header" id="Obliterating_Rift" data-toggle="collapse" href="#Obliterating_RiftBody">
+                <spell>Obliterating Rift</spell>
+                <div class="float-right">
+                    <span class="badge badge-dark">Mindenki</span>
+                    <span class="badge badge-info">Orb</span>
+                    <span class="badge badge-info">Pick-up</span>
+                    <span class="badge badge-info">Immunity</span>
                 </div>
+            </h5>
+            <div class="card-body collapse show" id="Obliterating_RiftBody">
+
+                <div class="row">
+                    <div class="col-xl-9 col-12">
+                        <ul>
+                            <li>Az orbok on-contact <dmg>9.4 Shadow</dmg> dmg-et sebeznek</li>
+                            <li>Nem tűnnek el maguktól</li>
+                            <li>
+                                Három opciónk van:
+                                <ul>
+                                    <li>Ha a raid HP-ja engedi, mindneki felszedi a saját orbját</li>
+                                    <li>Ha van elég immunity class, immunity-vel szedjük</li>
+                                    <li>Az off tank a közeli orbokat összeszedi</li>
+                                </ul>
+                            </li>
+
+                        </ul>
+                    </div>
+
+                    <div class="col-xl-3 col-12">
+                        <img style="width: 100%" src="../../../../assets/raids/shadowlands/castlenathria/HungeringDestroyer_ObliteratingRift.gif" />
+                    </div>
+                </div>
+
+
             </div>
         </div>
 
@@ -190,8 +192,6 @@
                         <img style="width: 100%;" src="../../../../assets/raids/shadowlands/castlenathria/HungeringDestroyer_VolatileEjection.png" />
                     </div>
                 </div>
-
-
             </div>
         </div>
 
@@ -232,11 +232,26 @@
             </div>
         </div>
 
+    <hr />
+
+    <div class="alert alert-dark" role="alert">
+        <h3>Materials</h3>
+        <hr />
+        <ul>
+            <li><a target="_blank" href="https://www.wowhead.com/guides/hungering-destroyer-castle-nathria-raid-strategy-guide">Wowhead guide</a></li>
+            <!--<li><a href="https://www.youtube.com/watch?v=Yx8FjMx4m6s">Fatboss video</a></li>-->
+            <li><a target="_blank" href="https://www.youtube.com/watch?v=fxoUWlhWUxo">Ready check pull videó <string>BiS</string></a></li>
+        </ul>
     </div>
+
+    </div>
+
+   
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
             integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs="
             crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js" integrity="sha384-LtrjvnR4Twt/qOuYxE721u19sVFLVSA4hf/rRt6PrZTmiPltdZcI7q7PXQBYTKyf" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js" integrity="sha384-LtrjvnR4Twt/qOuYxE721u19sVFLVSA4hf/rRt6PrZTmiPltdZcI7q7PXQBYTKyf" crossorigin="anonymous"></script>
+<script src="../../../../raid.js"></script>
 </body>
 </html>
