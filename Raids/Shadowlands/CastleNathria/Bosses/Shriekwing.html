@@ -66,346 +66,346 @@
 
         </div>
 
+        <div class="row">
+            <div class="col-xl-6 col-12">
+                <h2 id="P1_Header" data-toggle="collapse" href="#P1_Container">Phase 1 [110s]</h2>
+
+                <div id="P1_Container" class="collapse show">
 
 
-        <h2>Phase 1 [110s]</h2>
-
-        <div class="alert alert-info" role="alert">
-            <ul>
-                <li>~110s-ig tart, ennyi idő alatt tölt fel a boss energy-je (blood) 100-ra</li>
-                <li>Pullon és minden Phase 2 után aktív</li>
-                <li>Csak itt üthető a boss</li>
-            </ul>
-        </div>
-
-        <div class="card-container">
-            <div class="card bg-light">
-                <h5 class="card-header" id="Exsanguinating_Bite" data-toggle="collapse" href="#Exsanguinating_BiteBody">
-                    <spell>Exsanguinating Bite</spell>
-                    <div class="float-right">
-                        <span class="badge badge-primary">Tank</span>
+                    <div class="alert alert-info" role="alert">
+                        <ul>
+                            <li>~110s-ig tart, ennyi idő alatt tölt fel a boss energy-je (blood) 100-ra</li>
+                            <li>Pullon és minden Phase 2 után aktív</li>
+                            <li>Csak itt üthető a boss</li>
+                        </ul>
                     </div>
-                </h5>
-                <div class="card-body collapse show" id="Exsanguinating_BiteBody">
-                    <ul>
-                        <li>Az aktív tankra üti, <dmg>47.4k Phyisical</dmg> dmg, amit mitigálni kell</li>
-                        <li>Minden ütés 10 stack <a href="#Exsanguinated"><spell>Exsanguinated</spell></a>-et rak a tankra</li>
-                        <li><b>Tank swap minden ütés után</b>, amint lejárt az off-tankról a <a href="#Exsanguinated">Exsanguinated</a></li>
-                    </ul>
-                </div>
-            </div>
 
-            <div class="card-container">
-                <div class="card bg-light">
-                    <h5 class="card-header" id="Exsanguinated" data-toggle="collapse" href="#ExsanguinatedBody">
-                        <spell>Exsanguinated</spell>
-                        <div class="float-right">
-                            <span class="badge badge-primary">Tank</span>
+                    <div class="card bg-lighwarning">
+                        <h5 class="card-header" id="Exsanguinating_Bite" data-toggle="collapse" href="#Exsanguinating_BiteBody">
+                            <spell>Exsanguinating Bite</spell>
+                            <div class="float-right">
+                                <span class="badge badge-primary">Tank</span>
+                                <span class="badge badge-info">Tank Swap</span>
+                                <span class="badge badge-info">Mitigation</span>
+                            </div>
+                        </h5>
+                        <div class="card-body collapse show" id="Exsanguinating_BiteBody">
+                            <ul>
+                                <li>Az aktív tankra üti, <dmg>47.4k Phyisical</dmg> dmg; <strong>mitigálni kell</strong></li>
+                                <li>
+                                    Minden ütés 10 stack <a href="#Exsanguinated"><spell>Exsanguinated</spell></a>-et rak a tankra, <strong>azonnal tank-swap</strong>
+                                    <ul>
+                                        <li>Bleeding DoT: <dmg>0.2k Physical / 1.5s</dmg></li>
+                                        <li>10% healing reduce és 10% increase Phyiscal dmg</li>
+                                        <li>1.5s alatt esik le egy debuff (15s míg leesik az egész)</li>
+                                    </ul>
+                                </li>
+
+                            </ul>
                         </div>
-                    </h5>
-                    <div class="card-body collapse show" id="ExsanguinatedBody">
+                    </div>
+
+                    <div class="card bg-light">
+                        <h5 class="card-header" id="Sanguine_Ichor" data-toggle="collapse" href="#Sanguine_IchorBody">
+                            <spell>Sanguine Ichor</spell>
+                            <div class="float-right">
+                                <span class="badge badge-dark">Mindenki</span>
+                                <span class="badge badge-info">Patch</span>
+                            </div>
+                        </h5>
+                        <div class="card-body collapse show" id="Sanguine_IchorBody">
+                            <ul>
+                                <li><strong>Piros patch</strong> a földön, ami mindig player alatt spawnol</li>
+                                <li>Amíg benne állsz: <dmg>4.6k Shadow / 1s</dmg> tick dmg</li>
+                                <li>A sebzése nem stackkel attól, hogy több patch stackkel egymáson - <strong>célszerű stackkelni</strong></li>
+                                <li>Idővel csökken a mérete majd eltűnik - <strong>A P1 mindig tiszta mappel indul</strong></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="card bg-light">
+                        <h5 class="card-header" id="Descent" data-toggle="collapse" href="#DescentBody">
+                            <spell>Descent</spell>
+                            <div class="float-right">
+                                <span class="badge badge-success">Healer</span>
+                                <span class="badge badge-danger">Dps</span>
+                            </div>
+                        </h5>
+                        <div class="card-body collapse show" id="DescentBody">
+                            <ul>
+                                <li>6 yardos sugarú körben mindenkire <dmg>9.3k Physical</dmg> dmg-et üt</li>
+                                <li>A targetek dobnak egy <a href="#Sanguine_Ichor"><spell>Sanguine Ichor</spell></a> patch-et</li>
+                                <li>Mivel a sebzés nem soakolható, a kijelölt player 6 yardos közelében nem lehet más</li>
+                                <li><strong>Más körét dodge-olni kell</strong></li>
+                                <li>A <a href="#Sanguine_Ichor"><spell>Sanguine Ichor</spell></a>patch-eket kijelölt <strong>low-traffic area-ba kell tartani</strong></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="card bg-lightdanger">
+                        <h5 class="card-header" id="Bloodcurdling_Shriek" data-toggle="collapse" href="#Bloodcurdling_ShriekBody">
+                            <spell>Bloodcurdling Shriek</spell>
+                            <div class="float-right">
+                                <span class="badge badge-dark">Mindenki</span>
+                                <span class="badge badge-info">LoS</span>
+                            </div>
+                        </h5>
+                        <div class="card-body collapse show" id="Bloodcurdling_ShriekBody">
+
+                            <div class="row">
+
+                                <div class="col-xl-8 col-12">
+
+
+                                    <ul>
+                                        <li>
+                                            Phase-enként kétszer castolja a boss 6s-ig, aki LoS-ban marad
+                                            <ul>
+                                                <li><dmg>18.7k Sonic</dmg></li>
+                                                <li><dmg>8s DoT 2.5k Sonic / 2s</dmg></li>
+                                            </ul>
+                                        </li>
+                                        <li>A cast pillanatában mindenki egy <a href="#SanguineIchor"><spell>Sanguine Ichor</spell></a> patchet dob maga alá</li>
+                                    </ul>
+
+                                    <hr/>
+                                    <div>
+                                        <ul>
+                                            <li>Amikor castolni kezdi a kijelölt oszlop mögött stackkelünk (a main <span class="badge badge-primary">Tank</span> marad)</li>
+                                            <li><span class="badge badge-success">Healer</span> A <a href="#Descent"><spell>Sanguine Ichor</spell></a> sebzésére heal CD-t használunk</li>
+                                            <li>A második castot is ugyanannál az oszlopnál LoS-oljuk, az első tócsák mögött</li>
+                                        </ul>
+                                    </div>
+
+                                </div>
+
+                                <div class="col-xl-4 col-12">
+                                    <img style="width: 100%" src="../../../../assets/raids/shadowlands/castlenathria/Skriekwing_BloodcurdlingShriek.gif" />
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                    <div class="card bg-light">
+                        <h5 class="card-header" id="Echoing_Screech" data-toggle="collapse" href="#Echoing_ScreechBody">
+                            <spell>Echoing Screech</spell> <small>HC Only</small>
+                            <div class="float-right">
+                                <span class="badge badge-dark">Mindenki</span>
+                            </div>
+                        </h5>
+                        <div class="card-body collapse show" id="Echoing_ScreechBody">
+                            <ul>
+                                <li>Random targetre fordul a boss és echoing shriek disceket köp ki magából</li>
+                                <li>A discek visszapattannak a falakról</li>
+                                <li><strong>Dodgeolni kell őket</strong></li>
+                                <li>Ha a player a dischez ér 2s-re fearelődik és triggereli a <a href="#Descent">Descent</a>-et</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card bg-light">
+                        <h5 class="card-header" id="Echolocation" data-toggle="collapse" href="#EcholocationBody">
+                            <spell>Echolocation</spell>
+                            <div class="float-right">
+                                <span class="badge badge-success">Healer</span>
+                                <span class="badge badge-dark">Mindenki</span>
+                                <span class="badge badge-info">Drop-far</span>
+
+                            </div>
+                        </h5>
+                        <div class="card-body collapse show" id="EcholocationBody">
+
+                            <div class="row">
+                                <div class="col-xl-8 col-12">
+                                    <ul>
+                                        <li>Három random non-tank playert feljelöl a boss (piros marker felettük)</li>
+                                        <li>8s után a boss lacsap rájuk egy <a href="#Descent"><spell>Descent</spell></a></li>
+                                        <li><strong>Ki kell vinni a raidből</strong> a következő LoS oszlop közeléen lévő falhoz kell ledobálni, low traffic area-ba</li>
+                                        <li><span class="badge badge-success">Healer</span> Fel kell húzni a HP-ját a targetnek a dmg előtt</li>
+                                    </ul>
+                                </div>
+
+                                <div class="col-xl-4 col-12 text-right">
+                                    <img style="width: 100%" src="../../../../assets/raids/shadowlands/castlenathria/Shriekwing_Echolocation.png" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="card bg-light">
+                        <h5 class="card-header" id="Reverberating_Scream" data-toggle="collapse" href="#Reverberating_ScreamBody">
+                            <spell>Reverberating Scream</spell>
+                            <div class="float-right">
+                                <span class="badge badge-success">Healer</span>
+                            </div>
+                        </h5>
+                        <div class="card-body collapse show" id="Reverberating_ScreamBody">
+                            <ul>
+                                <li>
+                                    Elkerülhetetlen raid-wide dmg, amit <strong>ki kell healelni</strong>
+                                    <ul>
+                                        <li><dmg>9.3k Sonic</dmg> init dmg</li>
+                                        <li><dmg>16s-es DoT: 2.9k Sonic / 2s</dmg></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card bg-light">
+                        <h5 class="card-header" id="Blind_Swipe" data-toggle="collapse" href="#Blind_SwipeBody">
+                            <spell>Blind Swipe</spell>
+                            <div class="float-right">
+                                <span class="badge badge-dark">Mindenki</span>
+                            </div>
+                        </h5>
+                        <div class="card-body collapse show" id="Blind_SwipeBody">
+                            <ul>
+                                <li>Random targetre castolja a boss</li>
+                                <li>A target irányában 12 yardos fonrtal cone-ban sebez <dmg>15.5k Physical</dmg> mindenkit</li>
+                                <li><span class="badge badge-danger">Melee</span> Side-steppelhető, nem követi a boss a targetet, <strong>dodge-olni kell</strong></li>
+                                <li><span class="badge badge-danger">Ranged</span> Mindig <strong>13 yard távolságot kell tartani a boss-tól</strong></li>
+                                <li><span class="badge badge-success">Healer</span> Ha kevés a melee és jó a heal, ignorálható a mechanika, de ki kell tudni healelni</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-xl-6 col-12">
+                <h2 id="P2_Header" data-toggle="collapse" href="#P2_Container">Phase 2 [40s]</h2>
+
+                <div id="P2_Container" class="collapse show">
+                    <div class="alert alert-info" role="alert">
                         <ul>
-                            <li>Stackkel</li>
-                            <li>Bleeding DoT: <dmg>156 Physical / 1.5s</dmg></li>
-                            <li>10% healing reduce</li>
-                            <li>10% increase Phyiscal dmg</li>
-                            <li>1.5s alatt esik le egy debuff</li>
-                            <li>Egy ütés 10 stack-et apply-ol (15s míg leketyeg)</li>
+                            <li>100 energy-nél aktiválódik</li>
+                            <li>A boss nem üthető, hide n seek és dodge ball survivol phase</li>
+                            <li>40s-ig tart, ennyi idő alatt esik vissza az energy-je 0-ra, amikor újra kezdődik a P1</li>
                         </ul>
                     </div>
-                </div>
-            </div>
 
-        </div>
-
-        <div class="card-container">
-            <div class="card bg-light">
-                <h5 class="card-header" id="Sanguine_Ichor" data-toggle="collapse" href="#Sanguine_IchorBody">
-                    <spell>Sanguine Ichor</spell>
-                    <div class="float-right">
-                        <span class="badge badge-dark">Mindenki</span>
-                    </div>
-                </h5>
-                <div class="card-body collapse show" id="Sanguine_IchorBody">
-                    <ul>
-                        <li><strong>Piros patch</strong> a földön, amit több mechanika is kiválthat</li>
-                        <li>Mindig a player alá kerül</li>
-                        <li><dmg>4.6k Shadow / 1s</dmg> tick dmg amíg benne állsz</li>
-                        <li>A sebzése nem stackkel attól, hogy több patch stackkel egymáson - <strong>célszerű stackkelni</strong></li>
-                        <li>Idővel csökken a mérete majd eltűnik - <strong>A P1 mindig tiszta mappel indul</strong></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <div class="card-container">
-            <div class="card bg-light">
-                <h5 class="card-header" id="Descent" data-toggle="collapse" href="#DescentBody">
-                    <spell>Descent</spell>
-                    <div class="float-right">
-                        <span class="badge badge-success">Healer</span>
-                        <span class="badge badge-danger">Dps</span>
-                    </div>
-                </h5>
-                <div class="card-body collapse show" id="DescentBody">
-                    <ul>
-                        <li>6 yardos sugarú körben mindenkire <dmg>9.3k Physical</dmg> dmg-et üt</li>
-                        <li>A targetek dobnak egy <a href="#Sanguine_Ichor">Sanguine Ichor</a> patch-et</li>
-                        <li>Mivel a sebzés nem soakolható, a kijelölt player 6 yardos közelében nem lehet más</li>
-                        <li><strong>Más körét dodge-olni kell</strong></li>
-                        <li>A <a href="#Sanguine_Ichor">Sanguine Ichor</a> patch-eket kijelölt <strong>low-traffic area-ba kell tartani</strong></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <div class="card-container">
-            <div class="card bg-light">
-                <h5 class="card-header" id="Bloodcurdling_Shriek" data-toggle="collapse" href="#Bloodcurdling_ShriekBody">
-                    <spell>Bloodcurdling Shriek</spell>
-                    <div class="float-right">
-                        <span class="badge badge-dark">Mindenki</span>
-                    </div>
-                </h5>
-                <div class="card-body collapse show" id="Bloodcurdling_ShriekBody">
-
-                    <ul>
-                        <li>
-                            Phase-enként kétszer castolja a boss 6 másodpercig, aki LoS-ban marad
-                            <ul>
-                                <li><dmg>18.7k Sonic</dmg></li>
-                                <li><dmg>8s DoT 2.5k Sonic / 2s</dmg></li>
-                            </ul>
-                        </li>
-                        <li>A cast pillanatában mindenki egy <a href="#SanguineIchor"><spell>Sanguine Ichor</spell></a> patchet dob maga alá</li>
-                    </ul>
-
-                    <div class="alert alert-danger" role="alert">
-                        <ul>
-                            <li>Amikor castolni kezdi a kijelölt oszlop mögött stackkelünk (a <span class="badge badge-primary">Tank</span> is)</li>
-                            <li><span class="badge badge-success">Healer</span> A <a href="#Descent"><spell>Sanguine Ichor</spell></a> sebzésére heal CD-t használunk on-demand</li>
-                            <li>A második castot a másik kijelölt oszlop mögött stackkeljük ki</li>
-                            <li>A bosstól távolabbi két oszlopot nem használjuk (P2-re kell)</li>
-                        </ul>
-                    </div>
-                </div>
-
-            </div>
-
-        </div>
-
-        <div class="card-container">
-            <div class="card bg-light">
-                <h5 class="card-header" id="Echoing_Screech" data-toggle="collapse" href="#Echoing_ScreechBody">
-                    <spell>Echoing Screech</spell> <small>HC Only</small>
-                    <div class="float-right">
-                        <span class="badge badge-dark">Mindenki</span>
-                    </div>
-                </h5>
-                <div class="card-body collapse show" id="Echoing_ScreechBody">
-                    <ul>
-                        <li>Random targetre fordul a boss és echoing shriek disceket köp ki magából</li>
-                        <li>A discek visszapattannak a falakról</li>
-                        <li><strong>Dodgeolni kell őket</strong></li>
-                        <li>Ha a player a dischez ér 2s-re fearelődik és triggereli a <a href="#Descent">Descent</a>-et</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <div class="card-container">
-            <div class="card bg-light">
-                <h5 class="card-header" id="Echolocation" data-toggle="collapse" href="#EcholocationBody">
-                    <spell>Echolocation</spell>
-                    <div class="float-right">
-                        <span class="badge badge-success">Healer</span>
-                        <span class="badge badge-danger">Dps</span>
-                    </div>
-                </h5>
-                <div class="card-body collapse show" id="EcholocationBody">
-                    <ul>
-                        <li>Három random non-tank playert feljelöl a boss (piros marker felettük)</li>
-                        <li>8s után a boss lacsap rájuk egy <a href="#Descent"><spell>Descent</spell></a> </li>
-                        <li><strong>Ki kell vinni a raidből</strong> a következő LoS oszlop közeléen lévő falhoz kell ledobálni, low traffic area-ba</li>
-                        <li><span class="badge badge-success">Healer</span> Fel kell húzni a HP-ját a targetnek a dmg előtt</li>
-                    </ul>
-                </div>
-            </div>
-
-
-
-
-        </div>
-        <div class="card-container">
-            <div class="card bg-light">
-                <h5 class="card-header" id="Reverberating_Scream" data-toggle="collapse" href="#Reverberating_ScreamBody">
-                    <spell>Reverberating Scream</spell>
-                    <div class="float-right">
-                        <span class="badge badge-success">Healer</span>
-                    </div>
-                </h5>
-                <div class="card-body collapse show" id="Reverberating_ScreamBody">
-                    <ul>
-                        <li>
-                            Elkerülhetetlen raid-wide dmg, amit <strong>ki kell healelni</strong>
-                            <ul>
-                                <li><dmg>9.3k Sonic</dmg> init dmg</li>
-                                <li><dmg>16s-es DoT: 2.9k Sonic / 2s</dmg></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-
-        <div class="card-container">
-            <div class="card bg-light">
-                <h5 class="card-header" id="Blind_Swipe" data-toggle="collapse" href="#Blind_SwipeBody">
-                    <spell>Blind Swipe</spell>
-                    <div class="float-right">
-                        <span class="badge badge-dark">Mindenki</span>
-                    </div>
-                </h5>
-                <div class="card-body collapse show" id="Blind_SwipeBody">
-                    <ul>
-                        <li>Random targetre castolja a boss</li>
-                        <li>A target irányában 12 yardos fonrtal cone-ban sebez <dmg>15.5k Physical</dmg> mindenkit</li>
-                        <li><span class="badge badge-danger">Melee</span> Side-steppelhető, nem követi a boss a targetet, <strong>dodge-olni kell</strong></li>
-                        <li><span class="badge badge-danger">Ranged</span> Mindig <strong>13 yard távolságot kell tartani a boss-tól</strong></li>
-                        <li><span class="badge badge-success">Healer</span> Ha kevés a melee és jó a heal, ignorálható a mechanika, de ki kell tudni healelni</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <h2>Phase 2</h2>
-
-        <div class="alert alert-info" role="alert">
-            <ul>
-                <li>100 energy-nél aktiválódik</li>
-                <li>A boss nem üthető, hide n seek és dodge ball survivol phase</li>
-                <li>40s-ig tart, ennyi idő alatt esik vissza az energy-je 0-ra, amikor újra kezdődik a P1</li>
-            </ul>
-        </div>
-
-        <div class="card-container">
-            <div class="card bg-light">
-                <h5 class="card-header" id="Bloodgorge" data-toggle="collapse" href="#BloodgorgeBody">
-                    <spell>Bloodgorge</spell>
-                    <div class="float-right">
-                        <span class="badge badge-dark">Mindenki</span>
-                    </div>
-                </h5>
-                <div class="card-body collapse show" id="BloodgorgeBody">
-                    <ul>
-                        <li>Amint a boss energy-je (Blood-ja) betölti a 100-at, kerül rá egy <spell>Bloodgorged</spell> buff</li>
-                        <li>99% dmg reductiont kap a boss</li>
-                        <li>A boss a terem közepére teleportál és random irányokban mászkál</li>
-                        <li>Nem lehet tovább tankolni</li>
-                    </ul>
-
-                    <div class="alert alert-danger" role="alert">
-                        <ul>
-                            <li>A boss körül egy 12 yarod kör jelenik meg</li>
-                            <li>
-                                Aki betéved a körön belülre (<spell>Murder Prey</spell>)
+                        <div class="card bg-light">
+                            <h5 class="card-header" id="Bloodgorge" data-toggle="collapse" href="#BloodgorgeBody">
+                                <spell>Bloodgorge</spell>
+                                <div class="float-right">
+                                    <span class="badge badge-dark">Mindenki</span>
+                                </div>
+                            </h5>
+                            <div class="card-body collapse show" id="BloodgorgeBody">
                                 <ul>
-                                    <li>Jelentős dmg-et kap</li>
-                                    <li>4s-re fearelődik</li>
-                                    <li>Triggereli a <a href="#Deadly_Descent"><spell>Deadly Descent</spell></a>-et</li>
+                                    <li>Amint a boss energy-je (Blood-ja) betölti a 100-at, kerül rá egy <spell>Bloodgorged</spell> buff</li>
+                                    <li>99% dmg reductiont kap a boss</li>
+                                    <li>A boss a terem közepére teleportál és random irányokban mászkál</li>
+                                    <li>Nem lehet tovább tankolni</li>
                                 </ul>
-                            </li>
-                            <li>4s-es grace period van arra, hogy eltávolodjunk</li>
-                        </ul>
-                    </div>
+
+                                <div class="alert alert-danger" role="alert">
+                                    <ul>
+                                        <li>A boss körül egy 12 yarod kör jelenik meg</li>
+                                        <li>
+                                            Aki betéved a körön belülre (<spell>Murder Prey</spell>)
+                                            <ul>
+                                                <li>Jelentős dmg-et kap</li>
+                                                <li>4s-re fearelődik</li>
+                                                <li>Triggereli a <a href="#Deadly_Descent"><spell>Deadly Descent</spell></a>-et</li>
+                                            </ul>
+                                        </li>
+                                        <li>4s-es grace period van arra, hogy eltávolodjunk</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card bg-light">
+                            <h5 class="card-header" id="Deadly_Descent" data-toggle="collapse" href="#Deadly_DescentBody">
+                                <spell>Deadly Descent</spell>
+                                <div class="float-right">
+                                    <span class="badge badge-dark">Mindenki</span>
+                                </div>
+                            </h5>
+                            <div class="card-body collapse show" id="Deadly_DescentBody">
+                                <ul>
+                                    <li>A P1-es <a href="#Descent">Descent</a>-hez hasonlóan lecsap egy denevér </li>
+                                    <li>6 yarod körben mindenkit sebez <dmg>20.3k Phyiscal</dmg> formájában</li>
+                                </ul>
+                                <div class="alert alert-danger" role="alert">
+                                    <ul>
+                                        <li>Dodge-olható, de fennáll a veszélye, hogy másra húzza rá a player a dmg-et</li>
+                                        <li>A player körül egy kör indikálja a veszélyt</li>
+                                        <li>Minden player figyel arra, hogy ne álljon más körében</li>
+                                        <li><i>Valószínűleg</i> nem dob <a href="#Sanguine_Ichor">Sanguine Ichor</a>-t</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="card bg-light">
+                            <h5 class="card-header" id="Echoing_Sonar" data-toggle="collapse" href="#Echoing_SonarBody">
+                                <spell>Echoing Sonar</spell>
+                                <div class="float-right">
+                                    <span class="badge badge-dark">Mindenki</span>
+                                </div>
+                            </h5>
+                            <div class="card-body collapse show" id="Echoing_SonarBody">
+                                <ul>
+                                    <li>Az <a href="#Echoing_Screech"><spell>Echoing Screech</spell></a>-hez hasonló disceket köp ki a boss random irányokba</li>
+                                    <li><strong>Dodge-olni kell</strong></li>
+                                    <li>On-contact: 2s fear, majd 5s elteltével triggereli a <a href="#Deadly_Descent"><spell>Deadly Descent</spell></a>-et</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="card bg-light">
+                            <h5 class="card-header" id="Sonar_Shriek" data-toggle="collapse" href="#Sonar_ShriekBody">
+                                <spell>Sonar Shriek</spell>
+                                <div class="float-right">
+                                    <span class="badge badge-dark">Mindenki</span>
+                                </div>
+                            </h5>
+                            <div class="card-body collapse show" id="Sonar_ShriekBody">
+                                <ul>
+                                    <li>A phase alatt háromszor ismétlődő mechanika</li>
+                                    <li>A cast végére mindenkinek <strong>LoS-olnia kell a bosst</strong></li>
+                                    <li>Ha lát a boss: 4s fear és triggereli a <a href="#Deadly_Descent"><spell>Deadly Descent</spell></a>-et</li>
+                                </ul>
+                            </div>
+                        </div>
                 </div>
             </div>
         </div>
 
-        <div class="card-container">
-            <div class="card bg-light">
-                <h5 class="card-header" id="Deadly_Descent" data-toggle="collapse" href="#Deadly_DescentBody">
-                    <spell>Deadly Descent</spell>
-                    <div class="float-right">
-                        <span class="badge badge-dark">Mindenki</span>
-                    </div>
-                </h5>
-                <div class="card-body collapse show" id="Deadly_DescentBody">
-                    <ul>
-                        <li>A P1-es <a href="#Descent">Descent</a>-hez hasonlóan lecsap egy denevér </li>
-                        <li>6 yarod körben mindenkit sebez <dmg>20.3k Phyiscal</dmg> formájában</li>
-                    </ul>
-                    <div class="alert alert-danger" role="alert">
-                        <ul>
-                            <li>Dodge-olható, de fennáll a veszélye, hogy másra húzza rá a player a dmg-et</li>
-                            <li>A player körül egy kör indikálja a veszélyt</li>
-                            <li>Minden player figyel arra, hogy ne álljon más körében</li>
-                            <li><i>Valószínűleg</i> nem dob <a href="#Sanguine_Ichor">Sanguine Ichor</a>-t</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
+        
 
 
-        <div class="card-container">
-            <div class="card bg-light">
-                <h5 class="card-header" id="Echoing_Sonar" data-toggle="collapse" href="#Echoing_SonarBody">
-                    <spell>Echoing Sonar</spell>
-                    <div class="float-right">
-                        <span class="badge badge-dark">Mindenki</span>
-                    </div>
-                </h5>
-                <div class="card-body collapse show" id="Echoing_SonarBody">
-                    <ul>
-                        <li>Az <a href="#Echoing_Screech"><spell>Echoing Screech</spell></a>-hez hasonló disceket köp ki a boss random irányokba</li>
-                        <li><strong>Dodge-olni kell</strong></li>
-                        <li>On-contact: 2s fear, majd 5s elteltével triggereli a <a href="#Deadly_Descent"><spell>Deadly Descent</spell></a>-et</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <div class="card-container">
-            <div class="card bg-light">
-                <h5 class="card-header" id="Sonar_Shriek" data-toggle="collapse" href="#Sonar_ShriekBody">
-                    <spell>Sonar Shriek</spell>
-                    <div class="float-right">
-                        <span class="badge badge-dark">Mindenki</span>
-                    </div>
-                </h5>
-                <div class="card-body collapse show" id="Sonar_ShriekBody">
-                    <ul>
-                        <li>A phase alatt háromszor ismétlődő mechanika</li>
-                        <li>A cast végére mindenkinek <strong>LoS-olnia kell a bosst</strong></li>
-                        <li>Ha lát a boss: 4s fear és triggereli a <a href="#Deadly_Descent"><spell>Deadly Descent</spell></a>-et</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <hr />
-
-        <div class="alert alert-dark" role="alert">
-            <h3>Materials</h3>
+   
             <hr />
-            <ul>
-                <li><a href="https://www.wowhead.com/guides/shriekwing-castle-nathria-raid-strategy-guide">Wowhead guide</a></li>
-                <li><a href="https://www.youtube.com/watch?v=Yx8FjMx4m6s">Fatboss video</a></li>
-                <li><a href="https://www.youtube.com/watch?v=LMcBjOEP6gA">LeystTV Guide <string>BiS</string></a></li>
-            </ul>
+
+            <div class="alert alert-dark" role="alert">
+                <h3>Materials</h3>
+                <hr />
+                <ul>
+                    <li><a href="https://www.wowhead.com/guides/shriekwing-castle-nathria-raid-strategy-guide">Wowhead guide</a></li>
+                    <li><a href="https://www.youtube.com/watch?v=Yx8FjMx4m6s">Fatboss video</a></li>
+                    <li><a href="https://www.youtube.com/watch?v=LMcBjOEP6gA">LeystTV Guide <string>BiS</string></a></li>
+                </ul>
+            </div>
+        
         </div>
 
-    </div>
 
 
 
 
-
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-            integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs="
-            crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js" integrity="sha384-LtrjvnR4Twt/qOuYxE721u19sVFLVSA4hf/rRt6PrZTmiPltdZcI7q7PXQBYTKyf" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+                integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs="
+                crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js" integrity="sha384-LtrjvnR4Twt/qOuYxE721u19sVFLVSA4hf/rRt6PrZTmiPltdZcI7q7PXQBYTKyf" crossorigin="anonymous"></script>
 </body>
 </html>
