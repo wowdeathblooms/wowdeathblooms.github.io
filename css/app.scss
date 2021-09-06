@@ -43,20 +43,17 @@ header {
     display: flex;
     flex-direction: column;
     background: rgb(90,79,70);
-    background: linear-gradient(0deg, rgba(42,42,42,1) 0%, rgba(255,255,255,1) 100%);
 
     .logo {
         display: flex;
         align-items: center;
         margin: 0 auto;
-
         .nav-toggle {
             position: absolute;
             visibility: collapse;
         }
 
         .nav-toggle-label {
-            color: #000000;
             font-size: 2em;
         }
 

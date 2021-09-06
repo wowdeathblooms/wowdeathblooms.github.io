@@ -32,8 +32,7 @@ header {
   height: auto;
   display: flex;
   flex-direction: column;
-  background: #5a4f46;
-  background: linear-gradient(0deg, #2a2a2a 0%, white 100%); }
+  background: #5a4f46; }
   header .logo {
     display: flex;
     align-items: center;
@@ -42,7 +41,6 @@ header {
       position: absolute;
       visibility: collapse; }
     header .logo .nav-toggle-label {
-      color: #000000;
       font-size: 2em; }
     header .logo img {
       max-width: 100%;
