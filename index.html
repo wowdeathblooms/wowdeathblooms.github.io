@@ -1,64 +1,27 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 
 <head>
-
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="HandheldFriendly" content="true">
+	<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+	<meta http-equiv="Pragma" content="no-cache" />
+	<meta http-equiv="Expires" content="0" />
     <title>Death Blooms</title>
 
-    <!--<base href="https://lacx.github.io/DeathBlooms/" />-->
-    <base href="/" />
+    <base href="./" />
     <link rel="icon" type="image/png" href="favicon.ico">
-    <link href="manifest.json" rel="manifest" />
-
     <link rel="apple-touch-icon" sizes="512x512" href="deathbloomsrose512.png" />
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
 
-    <link href="_content/Blazorise/blazorise.css" rel="stylesheet" />
-    <link href="_content/Blazorise.Bootstrap/blazorise.bootstrap.css" rel="stylesheet" />
     <link href="css/app.css" rel="stylesheet" />
-
-    <!-- Start Single Page Apps for GitHub Pages -->
-    <script type="text/javascript">
-        // Single Page Apps for GitHub Pages
-        // https://github.com/rafrex/spa-github-pages
-        // Copyright (c) 2016 Rafael Pedicini, licensed under the MIT License
-        // ----------------------------------------------------------------------
-        // This script checks to see if a redirect is present in the query string
-        // and converts it back into the correct url and adds it to the
-        // browser's history using window.history.replaceState(...),
-        // which won't cause the browser to attempt to load the new url.
-        // When the single page app is loaded further down in this file,
-        // the correct url will be waiting in the browser's history for
-        // the single page app to route accordingly.
-        (function (l) {
-            if (l.search) {
-                var q = {};
-                l.search.slice(1).split('&').forEach(function (v) {
-                    var a = v.split('=');
-                    q[a[0]] = a.slice(1).join('=').replace(/~and~/g, '&');
-                });
-                if (q.p !== undefined) {
-                    window.history.replaceState(null, null,
-                        l.pathname.slice(0, -1) + (q.p || '') +
-                        (q.q ? ('?' + q.q) : '') +
-                        l.hash
-                    );
-                }
-            }
-        }(window.location))
-    </script>
-    <!-- End Single Page Apps for GitHub Pages -->
 </head>
 
 <body>
     <style>
-
         .app_splash {
             background: rgb(0,0,0);
             background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 33%, rgba(66,66,66,1) 100%);
@@ -71,33 +34,41 @@
             width: 90vw;
         }
     </style>
-
-    
-
+    <header>
+        <div class="logo">
+			<label for="nav-toggle" class="nav-toggle-label">&#9776;</label>
+			<input type="checkbox" id="nav-toggle" class="nav-toggle" @onchange="ToggleNavMenu">
+		
+		
+			<a href="/">
+				<img src="assets/DeathBloomsLogo2_paths.svg" alt="Death Blooms" />
+			</a>
+		</div>
+    </header>
+	<div class="content"> 
+		<div class="socials">
+			<a target="_blank" href="https://worldofwarcraft.com/en-gb/guild/eu/ragnaros/death-blooms">
+				<img class="external-icon" title="View Armory Page" src="assets/wow_square_xl.png">
+			</a>
+			<a target="_blank" href="https://raider.io/guilds/eu/ragnaros/Death%20Blooms">
+				<img class="external-icon" title="View Raider.IO Page" src="assets/raiderio_square_xl.png">
+			</a>
+			<a target="_blank" href="https://www.wowprogress.com/guild/eu/ragnaros/Death+Blooms">
+				<img class="external-icon" title="View WoWProgress Page" src="assets/wowprogress.png">
+			</a>
+			<a target="_blank" href="https://www.warcraftlogs.com/guild/rankings/359884/latest/">
+				<img class="external-icon" title="View Warcraft Logs Page" src="assets/warcraftlogs.png">
+			</a>
+			<a target="_blank" href="https://www.youtube.com/channel/UC61Ez0ENRIBOGW_wcJhpgkQ">
+				<img class="external-icon" title="View YouTube Page" src="assets/youtube_social_icon_red.png">
+			</a>
+		</div>
+	</div>
+<!--
     <app class="app_splash">
         <div style="text-align:center;font-size:2em;padding-top:1em;">Loading...</div>
         <img class="img_splash" src="assets/DeathBloomsLogo2_paths.svg" alt="Death Blooms" />
     </app>
-
-    <div id="blazor-error-ui">
-        An unhandled error has occurred.
-        <a href="/" class="reload">Reload</a>
-        <a class="dismiss">🗙</a>
-    </div>
-    
-
-
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-    <script src="_content/Blazorise/blazorise.js"></script>
-    <script src="_content/Blazorise.Bootstrap/blazorise.bootstrap.js"></script>
-    <script src="_framework/blazor.webassembly.js"></script>
-<script>
-
-    navigator.serviceWorker.register('service-worker.js');
-</script>
-
+-->	
 </body>
-
 </html>
